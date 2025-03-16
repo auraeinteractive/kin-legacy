@@ -1,0 +1,22 @@
+
+    <div>
+        <h2>
+            {i18n_create_your_own_group}
+        </h2>
+        <hr/>
+        <p>
+            <label for="Name">{i18n_name}</label>
+            <input type="text" id="Name" value="" placeholder="Name your room"/>
+        </p>
+        <p>
+            <label class="Full" for="Description">{i18n_group_description}</label>
+        </p>
+        <p>
+            <textarea rows="6" id="Description"></textarea>
+        </p>
+        <hr/>
+        <p>
+            <button type="button" onclick="FUI.getElementByUniqueId( 'convos' ).createGroup()">{i18n_create_group}</button>
+            <button type="button" onclick="FUI.getElementByUniqueId( 'convos' ).abortGroupCreation()">{i18n_close}</button>
+        </p>
+    </div>

@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'Maven Pro';
+    src: url('/themes/friendup13/fonts/MavenPro-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Tags */
+
+html
+{
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #5f7172;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 15px;
+}
+
+#RememberMe
+{
+	float: right;
+	margin: -5px 10px 0 0;
+	clear: left;
+}
+
+#LoginElement label
+{ 
+	text-transform: uppercase; 
+	font-size: 0.9em;
+	color: #5f7172;
+}
+
+#LoginElement h1
+{
+	text-transform: uppercase;
+	text-align: left;
+	color: #34495E;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#LoginElement
+{
+	text-align: left;
+}
+
+#invalidLogin { color:#F00; padding-top:6px; }
+#invalidLogin p { margin:0 0 6px 0; }
+button, .Button { margin:0; font-family: 'Maven Pro'; }
+
+div.Logo
+{
+	color: transparent;
+	background-image: url(/graphics/release_logo.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	height: 60px;
+	box-sizing: border-box;
+	font-size: 18px;
+	background-position: center 30px;
+	background-color: #e9e9e9;
+	padding: 70px 40px 50px 40px;
+	margin: -20px -20px 20px -20px;
+	text-align: center;
+}
+
+hr
+{
+	height: 20px;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,0.0);
+	clear: both;
+}
+
+p
+{
+	margin: 0 0 10px 0;
+}
+
+a, a:hover, a:visited, a:focus, a:active
+{
+	color: #386287;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+html input[type=text], html input[type=username], html input[type=password],
+html input[type=text]:focus, html input[type=username]:focus, html input[type=password]:focus
+{
+	box-sizing: border-box;
+	width: 100%;
+	outline: 0;
+	border-radius: 15px;
+	box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.05);
+	height: 35px;
+	line-height: 30px;
+	border: 1px solid #BDC3C7;
+	background: white;
+	font-size: 1em;
+	padding: 4px 8px;
+	transition: border 0.5s;
+}
+
+html input[type=text]:focus, html input[type=username]:focus, html input[type=password]:focus
+{
+	border: 1px solid #404040;
+}
+
+button
+{
+	display: block;
+	font-size: 15px;
+	width: 100%;
+	background-color: #e4d6c8;
+	color: #2b2b2b;
+	padding: 0px 10px;
+	height: 30px;
+	line-height: 28px;
+	border: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 15px;
+}
+
+input[type=checkbox]
+{
+	margin-top: 6px;
+    margin-right: 5px;
+}
+
+input[type=text], input[type=password]
+{
+	height: 30px;
+	padding: 0 10px;
+	line-height: 30px;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+	border: 0;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'Maven Pro', sans-serif;
+	font-weight: bold;
+	color: #4B9CE6;
+	box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+input[type=text]:focus, input[type=password]:focus
+{
+	box-shadow: 0px 0px 1px 2px rgba(75,156,230,1);
+}
+
+
+label
+{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+/* All content in the login window needs to be full size */
+html > body.activated.Login, html > body.activated.Login .ViewContainer, html > body.activated.Login .View,
+html > body[mobile].Login, html > body[mobile].Login .ViewContainer, html > body[mobile].Login .View
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}
+
+@media screen and (max-device-width: 420px)
+{
+	html > body.Login, html > body.Login .ViewContainer, html > body.Login .View
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+}
+
+/* Classes */
+
+.HRow
+{
+	min-height: 0px;
+	clear: both;
+}
+
+.HContent5 { width: 5%; }
+.HContent10 { width: 10%; }
+.HContent15 { width: 15%; }
+.HContent20 { width: 20%; }
+.HContent25 { width: 25%; }
+.HContent30 { width: 30%; }
+.HContent35 { width: 35%; }
+.HContent40 { width: 40%; }
+.HContent45 { width: 45%; }
+.HContent50 { width: 50%; }
+.HContent55 { width: 55%; }
+.HContent60 { width: 60%; }
+.HContent65 { width: 65%; }
+.HContent70 { width: 70%; }
+.HContent75 { width: 75%; }
+.HContent80 { width: 80%; }
+.HContent85 { width: 85%; }
+.HContent90 { width: 90%; }
+.HContent95 { width: 95%; }
+.HContent100 { width: 100%; }
+
+.FloatLeft { float: left; }
+
+.FlexContent
+{
+	display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.FlexContent.Right
+{
+	align-content: right;
+}
+
+.FlexContent.SmallGap
+{
+	gap: 8px;
+}
+
+.FlexContent > input
+{
+	margin: 0 !important;;
+}
+
+@media (max-width: 380px)
+{
+	html #LoginElement button
+	{
+		padding: 2px 2px;
+	}
+}
+
+.HRow.Spacing
+{
+	margin-top: 20px;
+}
+
+#LoginElement button
+{
+	padding: 2px 20px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	background: #f0e8e0ff;
+}
+
+#LoginElement button:after
+{
+	content: " ";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.05);
+	transition: opacity 0.2s;
+}
+
+#LoginElement button:hover:after
+{
+	opacity: 1;
+}
+
+/* Media queries and elements */
+
+#LoginElement
+{
+	padding: 20px;
+}
+
+@media screen and (max-device-width: 420px)
+{
+	#LoginElement
+	{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		overflow: auto;
+	}
+	
+	input[type=text], input[type=password], button, label
+	{
+		height: 40px;
+		line-height: 40px;
+	}
+	
+	input[type=checkbox]
+	{
+		margin-top: 11px;
+	}
+	
+	p
+	{
+		margin: 0 0 10px 0;
+	}
+
+	.HContent5 { width: 100%; }
+	.HContent10 { width: 100%; }
+	.HContent15 { width: 100%; }
+	.HContent20 { width: 100%; }
+	.HContent25 { width: 100%; }
+	.HContent30 { width: 100%; }
+	.HContent35 { width: 100%; }
+	.HContent40 { width: 100%; }
+	.HContent45 { width: 100%; }
+	.HContent50 { width: 100%; }
+	.HContent55 { width: 100%; }
+	.HContent60 { width: 100%; }
+	.HContent65 { width: 100%; }
+	.HContent70 { width: 100%; }
+	.HContent75 { width: 100%; }
+	.HContent80 { width: 100%; }
+	.HContent85 { width: 100%; }
+	.HContent90 { width: 100%; }
+	.HContent95 { width: 100%; }
+	.HContent100 { width: 100%; }
+}
+

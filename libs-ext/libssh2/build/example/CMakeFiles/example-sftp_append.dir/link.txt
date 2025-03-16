@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-sftp_append.dir/sftp_append.c.o" -o example-sftp_append  ../src/libssh2.a -lgcrypt 

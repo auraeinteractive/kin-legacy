@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-ssh2_agent_forwarding.dir/ssh2_agent_forwarding.c.o" -o example-ssh2_agent_forwarding  ../src/libssh2.a -lgcrypt 

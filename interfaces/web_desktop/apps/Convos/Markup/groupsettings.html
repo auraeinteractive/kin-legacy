@@ -1,0 +1,84 @@
+
+	<div class="Form">
+		<div class="Flow">
+			<div class="Section">
+				<p>
+					<strong>{i18n_group_name}</strong>
+				</p>
+				<div class="Flex">
+					<div>
+						<input type="text" id="groupName" name="name" value="{room-name}" placeholder="{i18n_chatroom_name}"/>
+					</div>
+					<div class="nameChange"></div>
+				</div>
+				<p class="AvatarBox">
+					<strong>{i18n_group_avatar}</strong>
+				</p>
+				<div class="AvatarBox">
+					<div class="AvatarPreview"></div>
+					<p>
+						<button type="button" class="Upload">{i18n_upload}</button>
+					</p>
+				</div>
+			</div>
+			<div class="Section">
+				<p>
+					<strong>{i18n_visibility}</strong>
+				</p>
+				<div>
+					<p>
+						{i18n_visibility_desc}
+					</p>
+					<div class="Flex">
+						<div><span>Private</span></div>
+						<div>
+							<fui-checkbox type="toggle" onchange="toggle-private" checked="{room-status}"/>
+						</div>
+						<div><span>Public</span></div>
+					</div>
+				</div>
+				<p>
+					<strong>{i18n_group_desc}</strong>
+				</p>
+				<p>
+					<textarea id="groupDescription" name="description" rows="12">{room-description}</textarea>
+				</p>
+			</div>
+			<div class="Section">
+				<p>
+					<strong>{i18n_create_invite}</strong>
+				</p>
+				<div class="InviteBox">
+					<p>
+						{i18n_invite_desc}
+					</p>
+					<div class="Flex">
+						<div>
+							<input type="text" placeholder="" id="inviteHolder"/>
+						</div>
+						<div>
+							<button type="button" class="Create">{i18n_create}</button>
+						</div>
+					</p>
+				</div>
+				<div class="Dangerzone">
+				    <p>
+					    <strong>{i18n_danger_zone}</strong>
+				    </p>
+				    <div class="Flex">
+				        <div><span>{i18n_delete_group}</span></div>
+				        <div>
+				            <fui-checkbox type="toggle" uniqueid="deletetoggle" onchange="toggle-delete" checked=""/>
+				        </div>
+				        <div>
+				            <button type="button" class="IconSmall fa-warning" onclick="destroyChatroom()">{i18n_execute_delete}</button>
+				        </div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<div class="Flow">
+			
+		</div>
+	</div>
+

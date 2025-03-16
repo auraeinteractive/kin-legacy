@@ -1,0 +1,6 @@
+# exclude build
+*.d
+*.o
+build/*
+optional/*
+

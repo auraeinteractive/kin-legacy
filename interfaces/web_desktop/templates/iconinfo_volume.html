@@ -1,0 +1,164 @@
+
+	
+	<style>
+		/* TODO: Fix hack! */
+		.IconInfoSkewed > div
+		{
+			margin-left: -18px;
+		}
+	</style>
+	
+	<div class="ContentFull">
+		<div class="VContentTop ScrollArea" style="bottom: 50px">
+			<div class="Padding">
+				<div class="Pages" id="IconInfo_!!">
+					<div class="Tab">
+						<div class="IconSmall fa-file">
+							&nbsp; {i18n_volume_information}
+						</div>
+					</div>
+					<!--<div class="Tab">
+						<div class="IconSmall fa-share-alt">
+							&nbsp; {i18n_volume_sharing}
+						</div>
+					</div>-->
+					<div class="Tab">
+						<div class="IconSmall fa-file-photo-o">
+							&nbsp; {i18n_volume_permissions}
+						</div>
+					</div>
+					<div class="Page">
+						<div class="PageScroll">
+							<div class="Padding">
+								<div class="HRow">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_volume_name}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<input type="text" value="{filename}" name="Filename" class="FullWidth"/>
+									</div>
+								</div>
+								<div class="HRow MarginTop FileInfo">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_volume_size}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										{filesize}
+									</div>
+								</div>
+								<!--<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{sharename}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<input type="text" class="FullWidth" value="" name="Sharename"/>
+									</div>
+								</div>
+								<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{sharewith}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<input type="text" class="FullWidth" value="" name="Sharewith" placeholder="Username1, Username2"/>
+									</div>
+								</div>-->
+								<!--
+								<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_protection}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										{protection}
+									</div>
+								</div>-->
+								<!--<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{Notes}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<textarea class="FullWidth" style="height: 80px" name="Notes">{iconnotes}</textarea>
+									</div>
+								</div>-->
+								
+								<!-- Commented out because it's not ready for primetime yet -->
+								
+								<!--<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_disk_sharing}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<button type="button" class="IconSmall fa-share-alt-square" name="sharingOptions">
+											{i18n_open_sharing_options}
+										</button>
+									</div>
+								</div>-->
+								
+								<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_disk_icon}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<div class="DropArea BackgroundNegative BorderTop BorderLeft BorderBottom BorderRight">
+										</div>
+									</div>
+								</div>
+								<div class="HRow MarginTop">
+									<div class="FloatLeft HContent30">
+										<strong>{i18n_disk_visibility}:</strong>
+									</div>
+									<div class="FloatLeft HContent5">&nbsp;</div>
+									<div class="FloatLeft HContent65">
+										<form>
+											<input type="radio" name="visibility" value="visible"/> {i18n_disk_visible}
+											<input type="radio" name="visibility" value="hidden"/> {i18n_disk_invisible}
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="Page">
+						<div class="PageScroll">
+							<div class="Padding">
+								<p class="Layout">
+									<strong>{i18n_share_with_workgroup}:</strong>
+								</p>
+								<p>
+									<select name="workgroup_sharing">
+										<option value="0">{i18n_no_workgroup_sharing}</option>
+									</select>
+								</p>
+							</div>
+						</div>
+					</div>-->
+					<div class="Page">
+						<div class="PageScroll">
+							<div class="Padding">
+								<p class="Layout">
+									<strong>{i18n_volume_permissions}:</strong>
+								</p>
+								<div id="Permissions{instance}"></div>
+								<!--<p class="Layout">
+									<strong>{i18n_security_domain}:</strong>
+								</p>
+								<div id="SecurityDomains{instance}"></div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="VContentBottom Padding BackgroundDefault BorderTop" style="height: 50px">
+			<button type="button" class="IconSmall fa-save FloatRight" instance="{instance}" onclick="Workspace.saveFileInfo(this,'{instance}')">
+				{Save}
+			</button>
+		</div>
+	</div>

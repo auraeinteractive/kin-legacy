@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopenssh_fixture.a CMakeFiles/openssh_fixture.dir/openssh_fixture.c.o
+/usr/bin/ranlib libopenssh_fixture.a

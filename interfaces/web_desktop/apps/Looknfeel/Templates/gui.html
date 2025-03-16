@@ -1,0 +1,136 @@
+
+	<input type="hidden" id="ThemeConfigData" value=""/>
+
+	<div class="ContentFull">
+		<div class="TheContainer VContentTop">
+			<div id="MainTabs">
+				<!--<div class="IconSmall fa-list-ul Tab">
+					{i18n_theme_engines}
+				</div>-->
+				<div class="IconSmall fa-wrench Tab">
+					{i18n_customize_theme}
+				</div>
+				<div class="IconSmall fa-mouse-pointer Tab">
+					{i18n_desktop}
+				</div>
+				<!--<div class="Page">
+					<div class="PageScroll">
+						<div class="HRow">
+							<div class="HContent40 FloatLeft Relative Padding ThemeList">
+								<p class="Layout">
+									<strong>{i18n_available_themes}:</strong>
+								</p>
+								<div class="BackgroundLists ColorLists" style="min-height: 400px" id="ThemeList">
+								</div>
+							</div>
+							<div class="HContent60 FloatLeft Relative Padding ThemePreview">
+								<p class="Layout">
+									<strong>{i18n_preview}:</strong>
+								</p>
+								<div style="position: relative; width: 100%; min-height:400px; border-radius: 7px; background: black; border: 1px solid rgba(0,0,0,0.5)" id="ThemePreview">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<div class="Page">
+					<div class="PageScroll">
+						<div class="Padding" id="ThemeConfig"></div>
+					</div>
+				</div>
+				<div class="Page">
+					<div class="PageScroll">
+						<div class="Padding" id="Behaviour">
+							<!--<p>
+								<strong>{i18n_menu_mode}:</strong>
+							</p>
+							<p>
+								<form>
+									<input type="radio" name="menuMode" value="pear" id="menuPear"/> Pear
+									<input type="radio" name="menuMode" value="miga" id="menuMiga"/> Miga
+								</form>
+							</p>-->
+							<input type="hidden" name="menuMode" value="pear" id="menuPear"/>
+							<!--<p class="Layout">
+								<strong>{i18n_directory_model}:</strong>
+							</p>
+							<p>-->
+								<form>
+									<!--<input type="radio" name="navigationMode" value="browser" id="navigationBrowser"> {i18n_browser}
+									<input type="radio" name="navigationMode" value="spacial" id="navigationSpacial"> {i18n_spacial}-->
+								</form>
+								<input type="hidden" name="navigationMode" value="browser" id="navigationBrowser"/>
+							<!--</p>-->
+							<p class="Layout">
+								<strong>{i18n_window_clicks}:</strong>
+							</p>
+							<p>
+								<form>
+									<input type="radio" name="windowClicks" value="clicktofront" id="focusmodeClicktofront"> {i18n_click_to_front}
+									<input type="radio" name="windowClicks" value="clicktofocus" id="focusmodeClicktofocus"> {i18n_click_to_focus}
+								</form>
+							</p>
+							<!--<p class="Layout">
+								<strong>{i18n_window_list_mode}:</strong>
+							</p>
+							<p>-->
+								<form>
+									<!--<input type="radio" name="windowList" value="separate" id="windowlistSeparate"> {i18n_separated}
+									<input type="radio" name="windowList" value="docked" id="windowlistDocked"> {i18n_docked}
+									<input type="radio" name="windowList" value="dockedlist" id="windowlistDockedlist"> {i18n_dockedlist}-->
+									<input type="hidden" name="windowList" value="dockedlist" id="windowlistDockedlist"/>
+								</form>
+							<!--</p>-->
+							<!--<p class="Layout">
+								<strong>{i18n_hidden_system}:</strong>
+							</p>
+							<p>
+								<form>
+									<input type="checkbox" name="hiddenSystem" id="hiddenSystem"> {i18n_hide_system}
+								</form>
+							</p>-->
+							<p class="Layout">
+								<strong>{i18n_virtual_workspaces}:</strong>
+							</p>
+							<p>
+								<input type="number" size="4" max="9" min="1" name="workspaceCount" id="workspaceCount" onkeydown="constrictWorkspaceCount()"> {i18n_workspace_count}
+							</p>
+							<p class="Layout">
+								<strong>{i18n_workspace_labels}</strong>
+							</p>
+							<textarea id="Labels">
+								{workspace_labels}
+							</textarea>
+							<div id="LabelView"></div>
+							<p class="Layout">
+								<strong>{i18n_hide_desktop_icons}:</strong>
+							</p>
+							<p>
+								<form>
+									<input type="checkbox" name="hideDesktopIcons" id="hideDesktopIcons">
+								</form>
+							</p>
+							<p class="Layout">
+								<strong>{i18n_scrollable_desktop_icons}:</strong>
+							</p>
+							<p>
+								<form>
+									<input type="checkbox" name="scrollDesktopIcons" id="scrollDesktopIcons">
+								</form>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="VContentBottom BorderTop Padding BackgroundDefault" style="height: 50px">
+			<button class="FloatRight IconSmall fa-save" type="button" onclick="applyTheme()">
+				{i18n_save}
+			</button>
+		</div>
+	</div>
+	
+	<script src="Progdir:Scripts/gui.js"></script>
+
+	<link rel="stylesheet" href="Progdir:CSS/gui.css"/>
+

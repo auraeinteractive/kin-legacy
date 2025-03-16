@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-sftp_write.dir/sftp_write.c.o" -o example-sftp_write  ../src/libssh2.a -lgcrypt 

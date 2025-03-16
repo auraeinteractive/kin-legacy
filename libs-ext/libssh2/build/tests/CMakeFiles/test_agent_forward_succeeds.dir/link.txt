@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic CMakeFiles/test_agent_forward_succeeds.dir/test_agent_forward_succeeds.c.o -o test_agent_forward_succeeds  ../src/libssh2.a librunner.a libsession_fixture.a ../src/libssh2.a -lgcrypt libopenssh_fixture.a 

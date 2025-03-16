@@ -1,0 +1,299 @@
+
+	<div class="Gui LayoutButtonbarBottom MyAccount">
+		<div class="VContentTop" style="top: 10px; left: 10px; bottom: 50px; right: 10px">
+			<div class="HContentLeft HContent100 ScrollArea BackgroundWindow" id="MainContainer">
+				<div id="MTabs" class="Tabs">
+					<div class="Tab IconSmall fa-address-card-o">
+						{i18n_basic_information}
+					</div>
+					{friendNetwork3}
+					<div class="Tab IconSmall fa-address-card">
+						{i18n_storage}
+					</div>
+					<!--<div class="Tab IconSmall fa-key">
+						{i18n_key_management}
+					</div>-->
+					<div class="Tab IconSmall fa-group">
+						{i18n_groups}
+					</div>
+					{friendNetwork1}
+					<div class="Page ScrollBarSmall">
+						<div class="PageScroll">
+							<div class="HRow Padding">
+							
+								<br/>
+							
+								<div class="AvatarRect MarginTop MarginBottom HRow">
+									<div class="FloatLeft TextCenter Relative HContent50">
+										<div id="AvatarArea">
+											<canvas id="Avatar" style="" width="512" height="512"></canvas>
+										</div>
+										<button type="button" style="vertical-align:top" class="fa-image Button IconSmall" onclick="changeAvatar()">
+											{i18n_changeavatar}
+										</button>
+									</div>
+									<div class="PaletteRect FloatLeft TextCenter Relative HContent50">
+										<div id="UserPalette">
+										</div>
+										<button type="button" id="ClearAvatar" class="fa-trash Button IconSmall">
+											{i18n_reset}
+										</button>
+									</div>
+								</div>
+								
+								<br/>
+								
+								<hr class="Divider"/>
+								
+								<div class="HRow">
+									<div class="Expand FloatLeft HContent50">
+										<div class="HRow MarginBottom">
+											<div class="FloatLeft HContent30">
+												<label class="InputHeight">{i18n_full_name}:</label>
+											</div>
+											<div class="FloatLeft HContent70">
+												<input type="text" class="FullWidth InputHeight" value="" id="UserAccFullname" value="{fullname}"/>
+											</div>
+										</div>
+										<div class="HRow MarginBottom">
+											<div class="FloatLeft HContent30">
+												<label class="InputHeight">{i18n_username}:</label>
+											</div>
+											<div class="FloatLeft HContent70">
+												<input type="username" class="FullWidth InputHeight" value="" disabled="disabled" id="UserAccUsername" value="{username}"/>
+											</div>
+										</div>
+
+										<div class="HRow MarginBottom">
+											<div class="FloatLeft HContent30">
+												<label class="InputHeight">{i18n_password}:</label>
+											</div>
+											<div class="FloatLeft HContent70" id="UserAccPasswordButton">
+												<button class="fa-edit IconSmall Button" onclick="toggleChangePass()" id="passToggle">
+													{i18n_edit_password}
+												</button>
+											</div>
+										</div>
+
+										<div id="ChangePassContainer" class="closed">
+											<hr class="Divider"/>
+											<div id="PassError"></div>
+											<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent30">
+													<label>{i18n_current_password}:</label>
+												</div>
+												<div class="FloatLeft HContent70">
+													<input class="FullWidth" type="password" value="" id="UserCurrentPassword"/>
+												</div>
+											</div>
+											<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent30">
+													<label>{i18n_new_password}:</label>
+												</div>
+												<div class="FloatLeft HContent70">
+													<input class="FullWidth" type="password" value="" placeholder="*****" id="UserAccPassword"/>
+												</div>
+											</div>
+											<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent30">
+													<label>{i18n_new_password} ({i18n_confirm}):</label>
+												</div>
+												<div class="FloatLeft HContent70">
+													<input class="FullWidth" type="password" value="" placeholder="*****" id="UserAccPasswordConfirm"/>
+												</div>
+											</div>
+										</div>
+								
+									</div>
+									<div class="Expand FloatLeft HContent50">
+										<div class="FloatLeft HContent5">
+											&nbsp;
+										</div>
+										<div class="FloatLeft HContent95">
+										
+											<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent30">
+													<label class="InputHeight">{i18n_timezone}:</label>
+												</div>
+												<div class="FloatLeft HContent70">
+													<div id="TimezoneSelect">
+														<div id="TimeZoneSelectA"></div><div id="TimeZoneSelectB"></div>
+													</div>
+													<input type="hidden" class="FullWidth InputHeight" value="" id="UserAccTimezone" value="{timezone}"/>
+												</div>
+											</div>
+										
+											<hr class="Divider"/>
+										
+											<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent30">
+													<label class="InputHeight">{i18n_email_address}:</label>
+												</div>
+												<div class="FloatLeft HContent70">
+													<input type="email" class="InputHeight FullWidth" value="" id="UserAccEmail" value="{email}"/>
+												</div>
+											</div>
+											
+											<input type="hidden" id="UserLanguage" value="en"/>
+											<input type="hidden" id="UserMode" value="normal"/>
+										
+											<!--<div class="HRow MarginBottom">
+												<div class="FloatLeft HContent45">
+													<label class="InputHeight">{i18n_language}:</label>
+												</div>
+												<div class="FloatLeft HContent55">
+													<select class="InputHeight FullWidth" id="UserLanguage">
+														{languages}
+													</select>
+												</div>
+											</div>
+											<div class="HRow MarginBottom">
+												<p class="NoMargins">
+													<label class="InputHeight">{i18n_workspace_mode}:</label>
+												</p>
+											</div>
+											<div class="HRow MarginBottom">
+												<p class="NoMargins">
+													<select class="InputHeight FullWidth" id="UserMode">
+														{modes}
+													</select>
+												</p>
+											</div>-->
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					{friendNetwork4}
+					<div class="Page">
+						<div class="HRow Padding PageScroll">
+							
+							<h3 class="InputHeight">
+								{i18n_available_storage}:
+							</h3>
+							<div id="StorageList"></div>
+							<br style="clear: both"/>
+							<div id="Unmounted" class="MarginTop BorderTop PaddingTop">
+								<h3 class="InputHeight">
+									{i18n_unmounted_storage}:
+								</h3>
+								<div id="StorageListUnmounted"></div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="Page">
+					
+						<div class="HRow Padding PageScroll" id="KeysList"></div>
+						
+					</div>-->
+					<div class="Page">
+						<div id="GroupSearch" class="BorderBottom">
+							<p class="TextCenter Searcher">
+								<input type="text" id="groupSearcher" class="InputHeight" placeholder="{i18n_find_groups}" onkeyup="findGroups()"/>
+							</p>
+						</div>
+						<div id="GroupList"></div>
+						<div id="OtherGroups"></div>
+					</div>
+					{friendNetwork2}
+				</div>
+				<script> 
+					if ( !window.initTabsHasRun )
+					{
+						window.initTabsHasRun = true;
+						InitTabs( 'MTabs' );
+						let tabs = ge( 'MTabs' ).getElementsByClassName( 'Tab' );
+						if( ge( 'activeTab' ).value != 'null' )
+						{
+							for( let a = 0; a < tabs.length; a++ )
+							{
+								if( tabs[a].classList.contains( 'fa-' + ge( 'activeTab' ).value ) )
+								{
+									tabs[a].click();
+									break;
+								}
+							}
+						}
+					}
+					
+				</script>
+			</div>
+		</div>
+		<div class="VContentBottom BorderTop Padding BackgroundDefault" style="height: 50px">
+			<button type="button" class="FloatRight Button IconSmall fa-save" onclick="saveDia()">
+				{i18n_save}
+			</button>
+		</div>
+	</div>
+	
+	<input type="hidden" id="activeTab" value="{activeTab}"/>
+	
+	<link rel="stylesheet" href="Progdir:Css/main.css"/>
+
+	<script src="Progdir:Scripts/accountmain.js"></script>
+	<style>
+		#PassError span { display:block; font-weight:bold; padding:6px; border:3px solid #F00; background:#FFF; margin:6px 0; }
+		#ChangePassContainer { display:none; }
+		#ChangePassContainer.opened { display:block; }
+		
+		.Disk, .BigButton
+		{
+			width: 40px;
+			height: 40px;
+			background-image: url(/iconthemes/friendup15/Disk.svg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			margin: 0 25px 40px 25px;
+		}
+		
+		.BigButton
+		{
+			background: #585858;
+			border-radius: 5px;
+			box-sizing: border-box;
+			padding: 5px;
+			text-align: center;
+		}
+		
+		.BigButton:hover
+		{
+			background: #a0a0a0;
+		}
+		
+		.IconSmall.BigButton.fa-plus:before
+		{
+			line-height: calc(40px - 8px);
+			display: block;
+			font-size: 36px;
+			color: #80d724;
+			text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+		}
+		
+		.Disk > .Label, .BigButton > .Label
+		{
+			position: absolute;
+			top: 45px;
+			left: -20px;
+			width: calc(100% + 40px);
+			text-align: center;
+			text-overflow: ellipsis;
+		}
+		
+		@media only screen and (max-width: 480px)
+		{
+			.FloatLeft.HContent45,
+			.FloatLeft.HContent55 { float:none; margin:0; padding:0; width:100%; }
+		}
+		
+		#TimeZoneSelectB, #TimeZoneSelectA
+		{
+			display: inline-block;
+			margin: 0 5px 5px 0;
+		}
+		
+	</style>
+

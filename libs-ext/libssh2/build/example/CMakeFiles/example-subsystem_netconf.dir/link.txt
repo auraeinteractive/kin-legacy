@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-subsystem_netconf.dir/subsystem_netconf.c.o" -o example-subsystem_netconf  ../src/libssh2.a -lgcrypt 

@@ -1,0 +1,595 @@
+/* Themable nice'o css ------------------------------------------------------ */
+html, body {min-height:100%;}
+
+body
+{
+	/*
+	font-family: Lato, sans-serif;
+	*/
+	font-size: 14px;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; 
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #1A3854;
+}
+
+
+body.Login
+{
+	background-image: url('/graphics/release_loginimage.jpg');
+	background-size: auto;
+	background-position: center;
+	background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* we dont need no background iamge on mobile, dont load it! */
+html body[mobile].Login
+{
+	background-image: none;
+}
+
+html > body:not([mobile]).Login div #Login.View
+{
+	box-shadow: none;
+	border: 0;
+	background: transparent;
+	border-radius: 15px;
+}
+
+body .ViewTitle { display: none; }
+
+body.Login .View > .Content:before
+{
+	display: none;
+}
+
+body > #FocusGrabber
+{
+	position: fixed;
+	top: 100%;
+}
+
+#OfflineMessage
+{ 
+	position: absolute;
+	visibility: hidden; 
+	opacity: 0; 
+	pointer-events: none; 
+}
+
+/* Helper classes ----------------------------------------------------------- */
+
+h1, h2, h3, h4
+{
+	font-weight: normal;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
+h1
+{
+	font-size: 25px;
+	text-align: center;
+}
+
+hr
+{
+	border: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	margin: 0;
+	clear: both;
+	height: auto;
+}
+
+.DialogError
+{
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 150px);
+	width: 300px;
+	height: 200px;
+	border-radius: 3px;
+	background: white;
+	color: black;
+	font-size: 1.1em;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+body.Error
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+hr.Space
+{
+	clear: both;
+	margin-bottom: 15px;
+	height: 15px;
+	border: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.Row
+{
+	display: block;
+	clear: both;
+}
+.InputHeight
+{
+	padding: 0;
+	margin: 0;
+	line-height: 30px;
+	height: 30px;
+}
+
+.Col5, .Col10, .Col15, .Col20, .Col25, .Col30, .Col35,
+.Col40, .Col45, .Col50, .Col55, .Col60, .Col65, .Col70, 
+.Col75, .Col80, .Col85, .Col90, .Col95, .Col100
+{
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.Col5   { width:   5%; }
+.Col10  { width:  10%; } .Col15  { width:  15%; }
+.Col20  { width:  20%; } .Col25  { width:  25%; }
+.Col30  { width:  30%; } .Col35  { width:  35%; }
+.Col40  { width:  40%; } .Col45  { width:  45%; }
+.Col50  { width:  50%; } .Col55  { width:  55%; }
+.Col60  { width:  60%; } .Col65  { width:  65%; }
+.Col70  { width:  70%; } .Col75  { width:  75%; }
+.Col80  { width:  80%; } .Col85  { width:  85%; }
+.Col90  { width:  90%; } .Col95  { width:  95%; }
+.Col100 { width: 100%; }
+
+.Spacer
+{
+	display: block;
+	clear: both;
+	height: 5px;
+}
+
+iframe.Server
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.7s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.7s;
+}
+
+/* Eula information --------------------------------------------------------- */
+
+body > .Eula
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background: #ffffff;
+	color: black;
+	font-size: 16px;
+}
+
+body > .Eula > div.EulaText
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 75px;
+	width: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+	padding: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+body > .Eula > div.EulaText > div,
+body > .Eula > div.EulaInfo > div
+{
+	max-width: 600px;
+	margin: auto;
+}
+
+body > .Eula > div.EulaInfo
+{
+	position: absolute;
+	bottom: 0;
+	height: 75px;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+}
+
+body > .Eula > div.EulaInfo button
+{
+	float: left;
+}
+
+body > .Eula > div.EulaInfo button + button
+{
+	float: right;
+}
+
+/* Login stuff -------------------------------------------------------------- */
+
+html body.Login #Login .Resize, 
+html body.Login #Login .LeftBar, html body.Login #Login .RightBar,
+html body.Login #Login .BottomBar
+{
+	visibility: hidden;
+}
+
+html body.Login #Login
+{
+	max-width: 96% !important;
+	min-width: 400px !important;
+	height: 578px !important;
+	top: calc(50% - 250px) !important;
+	left: calc(50% - 200px) !important;
+	background: #3c7db8;
+	transition: opacity !important;
+	-webkit-transition: opacity !important;
+	-moz-transition: opacity !important;
+	animation: fadeIn 0.5s;
+	-webkit-animation: fadeIn 0.5s;
+}
+
+/* Nice dade */
+
+body:before
+{
+	transition: opacity 1.5s;
+	content: " ";
+	display: block;
+}
+
+body.Loading:before,
+body.Login:before
+{
+	opacity: 1;
+	position: fixed;
+	z-index: 999999999;
+	background: #222222;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+body.Login:before
+{
+	opacity: 0;
+}
+
+/* End nice fade */
+
+@media (max-width: 420px)
+{
+	html body.Login #Login
+	{
+		max-width: 100% !important;
+		min-width: 100% !important;
+		height: 100% !important;
+		top: 0 !important;
+		left: 0 !important;
+	}
+	html body.Login #Login.LeftBar,
+	html body.Login #Login.RightBar,
+	html body.Login #Login.BottomBar,
+	html body.Login #Login.Resize
+	{
+		display: none;
+	}
+	html body.Login #Login .Content
+	{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	html body.Login #Login .Content:before
+	{
+		display: none;
+	}
+}
+
+@keyframes fadeIn
+{
+	from{ opacity: 0; }
+	to{ opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn
+{
+	from{ opacity: 0; }
+	to{ opacity: 1; }
+}
+
+html body.Login #Login .Title
+{
+	display: none;
+}
+
+html body.Login .View > .Content
+{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+}
+
+/* Screen overlay ----------------------------------------------------------- */
+
+#DoorsScreen
+{
+	min-height: 100%;
+}
+
+html body.Loading #FriendScreenOverlay
+{
+	visibility: visible !important;
+}
+
+#FriendScreenOverlay
+{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: #222222;
+	color: white;
+	overflow: hidden;
+	font-size: 1em;
+	z-index: 9999999999;
+	opacity: 0;
+	box-sizing: border-box;
+	transition: opacity 0.25s;
+}
+
+#FriendScreenOverlay.Visible
+{
+	display: block;
+	opacity: 0;
+}
+
+#FriendScreenOverlay.Visible.Showing
+{
+	opacity: 1;
+}
+
+#FriendScreenOverlay .Title
+{
+	position: absolute;
+	top: calc(50% - 300px);
+	left: calc(50% - 400px);
+	height: 40px;
+	width: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-bottom: 1px solid #555555;
+	line-height: 40px;
+	font-weight: bold;
+	color: white;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity,width 0.25s,0.5s;
+}
+
+[mobile] #FriendScreenOverlay .Title
+{
+	top: 0;
+	left: 0;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+#FriendScreenOverlay.Visible.Showing .Title.Showing
+{
+	opacity: 1;
+	width: 800px;
+}
+
+[mobile] #FriendScreenOverlay.Visible.Showing .Title.Showing
+{
+	width: 100%;
+}
+
+#FriendScreenOverlay .StatusBox
+{
+	position: absolute;
+	top: calc(50% - 260px);
+	left: calc(50% - 400px);
+	height: 560px;
+	width: 800px;
+	line-height: 30px;
+	color: white;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity,width 0.5s,0.5s;
+}
+
+[mobile] #FriendScreenOverlay .StatusBox
+{
+	width: calc(100% - 20px);
+	height: calc(100% - 40px);
+	left: 10px;
+}
+
+[mobile] #FriendScreenOverlay .StatusBox .HContent15
+{
+	display: none;
+}
+[mobile] #FriendScreenOverlay .StatusBox .HContent45,
+[mobile] #FriendScreenOverlay .StatusBox .HContent40
+{
+	width: 50% !important;
+}
+
+#FriendScreenOverlay.Visible.Showing .Title.Showing + .StatusBox
+{
+	opacity: 1;
+}
+
+#FriendScreenOverlay .StatusBox .Status
+{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #e67e22;
+}
+
+#FriendScreenOverlay .StatusBox .Status.Ok
+{
+	color: #27ae60;
+}
+
+#FriendScreenOverlay .StatusBox .Status.Error
+{
+	color: #c92918;
+}
+
+body:not([sharedapp]) .ViewContainer
+{
+	perspective: 1000px;
+}
+
+body.Login .ViewContainer
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+}
+
+body.Login .ViewContainer > .View
+{
+	position: absolute;
+}
+
+body.Login .ViewContainer > .View > .Content
+{
+	width: 100%;
+	height: 100%;
+}
+
+body:not([mobile]).Login .ViewContainer > #Login.View
+{
+	opacity: 0;
+	transform: rotatex(0deg) translate3d(0px,-40px,0) scale(0.5) !important;
+}
+
+html body:not([mobile]).Login .ViewContainer.Active > #Login.View
+{
+	transform: rotatex(0deg) translate3d(0px,-40px,0) scale(1) !important;
+}
+
+html body:not([mobile]).Login #Login.View
+{
+	transition: transform,opacity 1s,0.5s !important;
+	border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+    animation: doit 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes doit
+{
+	from
+	{
+		opacity: 0;
+		transform: rotatex(20deg) translate3d(0px,0px,-100px);
+	}
+	to
+	{
+		opacity: 1;
+		transform: rotatex(0deg) translate3d(0px,-40px,0px);
+	}
+}
+
+/* Extra login stuff */
+
+#LoginPopup
+{
+	position: absolute;
+	left: calc(50% - 250px);
+	top: calc(50% - 300px);
+	width: 500px !important;
+	height: 600px !important;
+}
+
+#LoginPopup .ContractAcceptReject
+{
+	display: block;
+	position: relative;
+}
+
+#LoginPopup .ContractAcceptReject button
+{
+	position: absolute;
+	left: calc(50% - 50px);
+	width: 100px;
+	margin-bottom: 30px;
+	background-color: #3e7eb6;
+	text-shadow: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#LoginPopup > div:not(.Content)
+{
+	display: none;
+}
+
+#LoginPopup
+{
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#LoginPopup > .Content
+{
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	overflow: auto;
+}
+
+body[mobile] #LoginPopup
+{
+	left: 0px;
+	top: 0px;
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: 0;
+}
+

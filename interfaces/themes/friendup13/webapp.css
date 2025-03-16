@@ -1,0 +1,160 @@
+html > body:not(.Inside):not(.Loading), 
+html body .View:not([transparent]) .View > .Content
+{
+	background-color: #e2deda !important;
+}
+
+body.Login
+{
+	background-image: url('/graphics/release_loginimage.jpg');
+	background-size: auto;
+	background-position: center;
+	background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+#Login
+{
+	position: absolute;
+	top: calc(50% - 265px);
+	left: calc(50% - 215px);
+	width: 430px !important;
+	height: 530px !important;
+	max-width: 430px !important;
+	max-height: 530px !important;
+	min-width: 430px !important;
+	min-height: 530px !important;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 39px 0px rgba(0,0,0,0.05);
+}
+#Login .Snap
+{
+	display: none;
+}
+
+.ViewContainer.StandardDialog.Dialog.Active,
+.ViewContainer.StandardDialog.Dialog
+{
+	display: flex;
+	background-color: rgba(0,0,0,0.8);
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	pointer-events: all;
+}
+
+.ViewContainer.StandardDialog.Dialog.Active > .View.Active,
+.ViewContainer.StandardDialog.Dialog.Active > .View,
+.ViewContainer.StandardDialog.Dialog > .View
+{
+    position: relative !important;
+    width: 480px !important;
+    height: 320px !important;
+    min-width: 480px !important;
+    min-height: 320px !important;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.ViewContainer.StandardDialog.Dialog > .View > .Content,
+.ViewContainer.StandardDialog.Dialog > .View > .Content > .Dialog,
+.ViewContainer.StandardDialog.Dialog > .View > .Content > .Dialog .BackgroundDefault
+{
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.ViewContainer.StandardDialog.Dialog > .View > .Content > .Dialog > .VContentTop.Padding
+{
+    padding: 30px;
+    font-size: 125%;
+}
+
+.ViewContainer .View.IconWindow.CustomToolbarArea,
+.ViewContainer + .ViewContainer
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.ViewContainer .View.IconWindow.CustomToolbarArea > .Content.FileDialog,
+.ViewContainer + .ViewContainer > .View
+{
+	width: calc(100% - 60px) !important;
+	max-width: 960px !important;
+	position: relative !important;
+	height: calc(100% - 60px) !important;
+	border-radius: 15px !important;
+	overflow: hidden;
+	min-width: auto;
+	min-height: auto;
+}
+
+[webapp=webapp] .ViewContainer + .ViewContainer .Title ,
+body[sharedapp=sharedapp] .ViewContainer + .ViewContainer .View > .Title
+{
+	display: block;
+	position: absolute;
+    z-index: 999;
+    background-color: transparent;
+    cursor: inherit;
+}
+
+.ViewContainer .Title > div > div:not(.Close ) 
+{
+    display: none;
+}
+
+.ViewContainer .View > .Title > div > .Close
+{
+    left: 8px;
+    top: 8px;
+    display: block;
+    position: absolute;
+    background-color: var(--BackgroundHeaviest);
+    border-radius: 100%;
+    cursor: pointer;
+    height: 20px;
+}
+.ViewContainer .View > .Title > div > .Close:hover
+{
+	left: 8px;
+	top: 8px;
+	opacity: 1;
+}
+
+/*
+
+*/
+
+[webapp] .ViewContainer + .ViewContainer > .View
+{
+	left: 0px !important;
+	top: 0px !important;
+	min-width: 100% !important;
+	min-height: 100% !important;
+	border-radius: 0px !important;
+}
+
+[webapp] .View
+{
+	background-color: #223344;
+}
+
+body[sharedapp=sharedapp] .ViewContainer:first-child.View > .Title
+{
+	display: none;
+}
+
+body[sharedapp=sharedapp] .ViewContainer + .ViewContainer .View > .Content, 
+html body:not([mobile])[sharedapp=sharedapp] .ViewContainer + .ViewContainer .View > .Content 
+{
+    left: 40px !important;
+    width: calc(100% - 30px) !important;
+}
+
+

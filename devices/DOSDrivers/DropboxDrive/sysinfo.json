@@ -1,0 +1,12 @@
+{
+	"type":    "DropboxDrive",
+	"literal": "Dropbox Based Filesystem",
+	"api-key":
+	{
+		"key": "",
+		"secret": "",
+		"dropboxhandler":"https://friendup.cloud/dropbox/dropbox.php"
+	},
+	"group":   "User",
+	"icon": "icon.png"
+}

@@ -1,0 +1,215 @@
+
+	<link rel="stylesheet" href="Progdir:Stylesheets/gui.css"/>
+	<div class="ContentFull">
+		<div class="VContentTop TopContainer" style="bottom: 50px">
+			<div class="HContentLeft HContent30 VContent100 List ScrollableY" id="Applications">
+			
+			</div>
+			<div class="HContentRight HContent70" id="SettingsContainer">
+				<div class="BackgroundDefault Padding Disabled BorderBottom ScrollableY" id="Settings">
+					<div class="HRow MarginTop" id="TypeSelectionElement">
+						<div class="HContent25 FloatLeft">
+							<strong id="ApplicationTypeLabel">{i18n_type}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<select id="TypeSelection" onchange="setItemType(this.value)"><option value="application">{i18n_type_application}</option><option value="bookmark">{i18n_type_bookmark}</option></select>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="ApplicationLabel">{i18n_application}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<select id="ApplicationSelection" onchange="if( this.value != '' ){ document.body.classList.add( 'SelectedApp' ); ge( 'Application' ).value = this.value; } else document.body.classList.remove( 'SelectedApp' );"></select>
+							<input type="text" class="FullWidth" onchange="if( this.value.length <= 0 ){ document.body.classList.remove( 'SelectedApp' ); ge( 'Application' ).value = this.value; } else document.body.classList.add( 'SelectedApp' );" id="Application"/>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="DisplayLabel">{i18n_display_name}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<input type="text" class="FullWidth" id="DisplayName"/>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="ShortDescriptionLabel">{i18n_description}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<input type="text" class="FullWidth" id="ShortDescription"/>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="IconLabel">{i18n_preferred_workspace}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<input type="number" id="Workspace" value="1" min="0" max="9"/>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="IconLabel">{i18n_open_silent}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<input type="hidden" id="OpenSilent" value="0"/>
+							<input type="checkbox" id="OpenSilentCheck" onclick="ge('OpenSilent').value = this.checked"/>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="IconLabel">{i18n_icon}:</strong>
+						</div>
+						<div class="HContent55 FloatLeft">
+							<input type="text" class="FullWidth ButtonHeight " id="Icon" placeholder="Example: Home:Icons/icon.png"/>
+						</div>
+						<div class="HContent20 FloatLeft">
+							<button type="button" class="MarginLeft IconSmall fa-folder" onclick="FindIcon()"></button>
+						</div>
+					</div>
+					<div class="HRow MarginTop">
+						<div class="HContent25 FloatLeft">
+							<strong id="SortOrderLabel">{i18n_sort_order}:</strong>
+						</div>
+						<div class="HContent75 FloatLeft">
+							<button type="button" class="IconSmall fa-arrow-up" onclick="Application.sendMessage( { command: 'updockitem' } )">
+					
+							</button>
+							<button type="button" class="IconSmall fa-arrow-down" onclick="Application.sendMessage( { command: 'downdockitem' } )">
+					
+							</button>
+						</div>
+					</div>
+					
+					<div class="HRow BorderBottom MarginTop PaddingTop PaddingBottom">
+						<div class="HContent25 FloatLeft">&nbsp;</div>
+						<div class="HContent75 FloatLeft">
+							<button type="button" class="IconSmall fa-save" onclick="SaveDockItem()">
+								{i18n_save}
+							</button>
+							<button type="button" class="IconSmall fa-remove" onclick="Application.sendMessage( { command: 'deleteitem' } )">
+								{i18n_remove}
+							</button>
+							<div class="FloatRight">
+								<button type="button" class="FloatLeft IconSmall" onclick="Application.receiveMessage( { command: 'close' } )">
+									{i18n_abort}
+								</button>
+							</div>
+						</div>
+					</div>
+										
+				</div>
+				<div class="BackgroundDefault Padding ScrollableY" id="Options">
+					<h2>
+						{i18n_dock_layout_settings}
+					</h2>
+					<div class="BorderTop PaddingTop">
+						<div class="HRow MarginBottom">
+							<div class="HContent35 FloatLeft">
+								<p class="InputHeight">
+									<strong>{i18n_dock_list}:</strong>
+								</p>
+							</div>
+							<div class="HContent65 FloatLeft">
+								<select class="InputHeight FullWidth" id="Docks">
+								</select>
+							</div>
+						</div>
+						<div class="HRow MarginBottom">
+							<div class="HContent35 FloatLeft">
+								<p class="InputHeight">
+									<strong>{i18n_dock_size}:</strong>
+								</p>
+							</div>
+							<div class="HContent65 FloatLeft">
+								<select class="InputHeight FullWidth" id="DockSize">
+								</select>
+							</div>
+						</div>
+						<div class="HRow MarginBottom">
+							<div class="HContent35 FloatLeft">
+								<p class="InputHeight">
+									<strong>{i18n_dock_layout}:</strong>
+								</p>
+							</div>
+							<div class="HContent65 FloatLeft">
+								<select class="InputHeight FullWidth" id="DockLayout">
+								</select>
+							</div>
+						</div>
+						<div class="HRow">
+							<div class="HContent35 FloatLeft">
+								<p class="InputHeight">
+									<strong>{i18n_dock_coords}:</strong>
+								</p>
+							</div>
+							<div class="HContent30 FloatLeft">
+								<input type="number" class="FullWidth InputHeight" id="DockX"/>
+							</div>
+							<div class="HContent5 FloatLeft">
+								&nbsp;
+							</div>
+							<div class="HContent30 FloatLeft">
+								<input type="number" class="FullWidth InputHeight" id="DockY"/>
+							</div>
+						</div>
+						<div class="HRow MarginBottom MarginTop">
+							<button type="button" class="IconSmall fa-save" id="BtnSaveDock" onclick="SaveCurrentDock()">
+								{i18n_save_dock}
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="VContentBottom BackgroundDefault Padding BorderTop" style="height: 50px">
+			<div class="TextLeft">
+				<button type="button" class="IconSmall fa-plus " id="BtnAddDockItem" onclick="Application.sendMessage( { command: 'newdockitem' } )">
+					{i18n_add_dock_item}
+				</button>
+			</div>
+			<!--<button type="button" class="IconSmall fa-table" id="BtnAddDock" onclick="NewDock()">
+				{i18n_add_dock}
+			</button>-->
+		</div>
+	</div>
+
+	<script src="Progdir:Scripts/gui.js"></script>
+	
+	<style>
+		.Empty
+		{
+			display: block;
+			width: 100%;
+			height: 40px;
+			background: transparent;
+		}
+		html body:not([mobile]) #Applications
+		{
+			width: 30%;
+		}
+		#Settings
+		{
+			height: 50%;
+		}
+		#Settings.Disabled
+		{
+			display: none;
+			height: 0;
+		}
+		#Options
+		{
+			top: 50%;
+			bottom: 0px;
+		}
+		#Settings.Disabled + #Options
+		{
+			top: 0;
+		}
+		html #Applications.List > div > div
+		{
+			line-height: 40px;
+		}
+	</style>
+

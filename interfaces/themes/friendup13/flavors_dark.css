@@ -1,0 +1,544 @@
+/* Charcoal ----------------------------------------------------------------- */
+
+/* FUI */
+
+:root body.Dark
+{
+    --fui-background-foreground: #262626;
+    --fui-background-foreground-dim: #26262688;
+    --fui-background: #1c1c1c;
+    --fui-background-dim: #1c1c1c88;
+    --fui-color: #e6e6e6;
+    --fui-button-background: #333333;
+    --fui-button-color: #e8e8e8;
+    --fui-menu-background: #333333;
+    --fui-list-background: #1c1c1c;
+    --fui-list-item-background: #212121;
+    --fui-list-item-background-alternate: #2c2c2c;
+    --fui-list-item-color: #afafaf;
+    --fui-list-item-color-alternate: #c9c9c9;
+    --fui-module-background-darker: #242424;
+    --fui-module-background: #333333;
+    
+}
+
+/* END FUI */
+
+html > body.Dark, html > body.Dark *
+{
+    scrollbar-color: #404040 #1e1e1e !important;
+}
+
+html > body.Dark,
+html > body.Dark.Inside,
+html > body.Dark .Content .Scroller:after
+{
+	background: #303030;
+	border-radius: 0;
+}
+
+body.Dark .AppsShowingTitle
+{
+	background: #303030;
+}
+
+html body.Dark #Screens > div
+{
+	background: #303030;
+}
+
+html body.Dark .File .Icon .Drive .Label
+{
+	filter: grayscale(1) brightness(0.4) drop-shadow(1px 2px 2px rgba(255,255,255,0.4));
+}
+
+html body.Dark .ToggleGroup .VolumeInfo .SizeText 
+{
+	color: white;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+html [mobile=mobile].Dark.ViewMaximized.HasMenu #WorkspaceMenu, 
+html [mobile=mobile].Dark.ViewMaximized #WorkspaceMenu, 
+html [mobile=mobile].Dark.WidgetSlideDown.HasMenu #WorkspaceMenu
+{
+	background: #303030;
+}
+
+
+html body.Dark[mobile=mobile] > #MobileMenu.Visible
+{
+	background: #222222;
+	color: white;
+}
+
+html body.Dark[mobile] #WorkspaceMenu.Open ul
+{
+	background: #303030;
+}
+
+html body.Dark .Screen > .TitleBar .ScreenList
+{
+	color: white;
+}
+
+html body.Dark #DoorScreen:after,
+body.Dark:not(.ViewMaximized) #Screens > div.Screen > .TitleBar, 
+body.Dark.ViewMaximized.AppsShowing #Screens > div.Screen > .TitleBar,
+body.Dark[mobile] #WorkspaceMenu,
+html body.Dark #DoorsScreen:after
+{
+	background-color: #303030;
+}
+
+
+html body.Dark .ViewContainer[childview].Active > .MobileBack:before
+{
+	color: #e0e0e0;
+	font-size: 1.4em;
+}
+
+[mobile].Dark #WorkspaceMenu.Open
+{
+	background: #303030;
+}
+
+html body.Dark .Screen > .ScreenContent
+{
+	background: #303030;
+}
+
+html body.Dark a, html body a.Dark:visited
+{
+	color: #ffbe85;
+}
+
+html [mobile=mobile].Dark.ViewMaximized.HasMenu #WorkspaceMenu,
+html [mobile=mobile].Dark.WidgetSlideDown.HasMenu #WorkspaceMenu
+{
+	background: #303030;
+}
+
+body.Dark .SliderElement .SliderGroove
+{
+	background: rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+html body.Dark .Screen > .TitleBar > .Left .Extra .Offline
+{
+	filter: invert(1);
+}
+
+body.Dark input[type=text], body.Dark input[type=range], body.Dark input[type=number], body.Dark input[type=date],
+body.Dark input[type=email], body.Dark input[type=username],
+body.Dark input[type=datetime-local], body.Dark input[type=password], 
+html body.Dark textarea, html body.Dark select, html body.Dark select:hover
+{
+    border-radius: 10px;
+    border: 1px solid #202020;
+    background: #242424;
+    color: #e0e0e0;
+}
+
+html body.Dark:not([mobile]) .View, html body.Dark .View.Active
+{
+	box-shadow: 0px 1px 15px 1px rgba(0,0,0,0.3);
+}
+
+html > body.Dark .View.Active > .Title,
+html > body[mobile].Dark .View > .Title
+{
+	background-color: #303030;
+}
+
+html > body.Dark .View > .Title
+{
+	background-color: #404040;
+}
+
+html > body:not(.Inside):not(.Loading).Dark, html body.Dark .View:not([transparent]) .View > .Content,
+html body.Dark .View > .Content,
+html body.Dark
+{
+	background-color: #2b2b2b !important;
+	color: #e0e0e0;
+}
+
+html > body.Dark > div button, html > body.Dark > div .Button
+{
+	background-color: #3c3c3c;
+    border: 1px solid #3c3c3c;
+    color: #e0e0e0;
+}
+
+html > body.Dark > div button:hover, 
+html > body.Dark > div .Button:hover
+{
+    border: 1px solid var(--ColorBgButtonHover);
+}
+
+html body.Dark .View .DirectoryToolbar,
+html body.Dark .View.Active .DirectoryToolbar 
+{
+	background-color: #3c3c3c;
+	color: #e0e0e0;
+}
+
+html body.Dark .DirectoryToolbar button.Makedir:before
+{
+	filter: brightness(2) grayscale(1);
+}
+
+html body.Dark .View .DirectoryToolbar button:not(.IconButton),
+html body.Dark .View .DirectoryToolbar .Button:not(.IconButton)
+{
+	color: #e0e0e0;
+	background-color: none;
+}
+
+html body.Dark .View .DirectoryToolbar > .ToggleGroup > button:hover:before, 
+html body.Dark .View .DirectoryToolbar > .Group > button:hover:before, 
+html body.Dark .View .DirectoryToolbar > button:hover:before
+{
+	color: white;
+}
+
+
+html body.Dark .View .DirectoryToolbar > .ToggleGroup > button:hover:before, 
+html body.Dark .View .DirectoryToolbar > button:hover:before
+{
+	color: #e0e0e0;
+}
+html > body.Dark .View .DirectoryToolbar button:before, 
+html > body.Dark .View .DirectoryToolbar button:after
+{
+	color: rgba(224,224,224,170);
+}
+
+html body.Dark .View .DirectoryToolbar > .ToggleGroup > button.Active:before
+{
+	color: white;
+}
+
+html body.Dark .BackgroundNegative,
+html body.Dark .Box.BackgroundNegative,
+html body.Dark .BoxBlue.BackgroundNegative
+{
+	background-color: #808080;
+}
+
+html body.Dark .Negative,
+html body.Dark .Box.Negative,
+html body.Dark .BoxBlue.Negative
+{
+	color: #ffffff;
+}
+
+html body.Dark .File a
+{
+	color: #e0e0e0;
+}
+
+html body.Dark .File.Selected .Title,
+html body.Dark #Screens .File.Selected .Title
+{
+	color: white;
+}
+
+html body.Dark div .File.Selected:before
+{
+	background-color: rgba(20,20,20,1);
+}
+
+html body.Dark .File.Selected:before
+{
+	background: rgba(255,255,255,0.1);
+	border-radius: 10px;
+	content: " ";
+	display: block;
+	width: 120%;
+	position: absolute;
+	top: 0;
+	left: -10%;
+	height: 100%;
+}
+
+html body.Dark .File .Icon > *:after
+{
+	color: #303030;
+}
+
+html body.Dark .PageActive, html body.Dark .PageActive .PageScroll
+{
+	background-color: rgba(0,0,0,0.05);
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+html body.Dark .Tab.TabActive
+{
+	border: 1px solid #505050; 
+	background-color: #505050;
+	color: #e0e0e0;
+}
+
+html body.Dark .Tab
+{
+	color: #b1c0ce;
+	background-color: #3c3c3c;
+	border: 1px solid #3c3c3c;
+	margin-right: 1px;
+}
+html body.Dark .Tab:last-child
+{
+	margin-right: 0;
+}
+
+html body.Dark .BackgroundDefault,
+html body.Dark .Dialog,
+html body.Dark .WindowBackground, 
+html body.Dark .Dialog > .DialogHeader, 
+html body.Dark .Dialog > .DialogButtons,
+html body.Dark .ToolbarBackground,
+html body.Dark div.Listview > .Footer,
+html body.Dark .List,
+html body.Dark div.Listview > .Icons,
+html body.Dark .Box, 
+html body.Dark .BoxBlue
+{
+	background-color: #2b2b2b;
+	color: #e0e0e0;
+}
+
+html body[mobile].Dark .Dialog,
+html body[mobile].Dark .Dialog > .DialogHeader, 
+html body[mobile].Dark .Dialog > .DialogButtons
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
+html body.Dark .PadBorder {
+	border-color : #303030;
+}
+
+html body.Dark .PadBackground {
+	background-color : #303030;
+}
+
+html body.Dark .BackgroundLists
+{
+	background-color: #202020;
+}
+
+html body.Dark .BackgroundLists .sw1,
+body.Dark .List tr.sw1, 
+body.Dark .List div.sw1,
+html body.Dark div.Listview > .Icons > .Scroller > .Row.Odd .Column, 
+html body.Dark div.ColumnView .Row.Odd .Column, 
+html body.Dark #MousePointer .Row.Odd .Column,
+html body.Dark .ZebraList > tr, 
+html body.Dark .ZebraList > div
+{
+	background-color: #282828;
+	color: #e0e0e0;
+}
+
+html body.Dark .ZebraList > tr .PadBorder, 
+html body.Dark .ZebraList > div .PadBorder
+{
+	border-color: #282828;
+}
+
+html body.Dark .ZebraList > tr .PadBackground, 
+html body.Dark .ZebraList > div .PadBackground
+{
+	background-color: #282828;
+}
+
+html body.Dark .ZebraList.Interactive > tr:hover, 
+html body.Dark .ZebraList.Interactive > div:hover
+{
+	background-color: #303030;
+}
+
+html body.Dark .ZebraList.Interactive > tr:hover .PadBorder, 
+html body.Dark .ZebraList.Interactive > div:hover .PadBorder
+{
+	border-color: #303030;
+}
+
+html body.Dark .ZebraList.Interactive > tr:hover .PadBackground, 
+html body.Dark .ZebraList.Interactive > div:hover .PadBackground
+{
+	background-color: #303030;
+}
+
+html body.Dark .BackgroundLists .sw2,
+body.Dark .List tr.sw2, 
+body.Dark .List div.sw2,
+html body.Dark div.Listview > .Headers > .Header:nth-child(odd), 
+html body.Dark div.Listview > .Headers > .Header:nth-child(even),
+html body.Dark div.Listview > .Icons > .Scroller > .Row .Column, 
+html body.Dark div.ColumnView .Row .Column, 
+html body.Dark #MousePointer .Row .Column,
+html body.Dark .ZebraList > tr:nth-child(odd), 
+html body.Dark .ZebraList > div:nth-child(odd)
+{
+	background-color: #202020;
+	color: #e0e0e0;
+}
+
+html body.Dark .ZebraList > tr:nth-child(odd) .PadBorder, 
+html body.Dark .ZebraList > div:nth-child(odd) .PadBorder
+{
+	border-color: #202020;
+}
+
+html body.Dark .ZebraList > tr:nth-child(odd) .PadBackground, 
+html body.Dark .ZebraList > div:nth-child(odd) .PadBackground
+{
+	background-color: #202020;
+}
+
+html body.Dark .ZebraList.Interactive > tr:nth-child(odd):hover, 
+html body.Dark .ZebraList.Interactive > div:nth-child(odd):hover
+{
+	background-color: #282828;
+}
+
+html body.Dark div.Listview > .Icons > .Scroller > .Row.Selected > .Column,
+html body.Dark #MousePointer .Row.Selected .Column
+{
+	background: #151515;
+	color: white;
+}
+html body.Dark div.Listview > .Icons > .Scroller > .Row.Odd.Selected > .Column,
+html body.Dark #MousePointer .Row.Odd.Selected .Column
+{
+	background: #101010;
+	color: white;
+}
+
+html body.Dark .List tr.sw1.Selected, 
+html body.Dark .List div.sw1.Selected
+{
+	background-color: #455155;
+}
+html body.Dark .List tr.sw2.Selected, 
+html body.Dark .List div.sw2.Selected
+{
+	background-color: #3e484c;
+}
+
+html body.Dark .VertTab
+{
+	background-color: #404040;
+	color: #e0e0e0;
+}
+
+html body.Dark .VertTab.Active
+{
+	background-color: #303030;
+}
+
+html body.Dark .Screen > .TitleBar
+{
+	background: #202020;
+	color: #e0e0e0;
+}
+
+html body.Dark div #Tray > div
+{
+	color: white;
+}
+
+html body.Dark #WorkspaceMenu > ul > li,
+html body.Dark #WorkspaceMenu .Menu,
+html body.Dark #WorkspaceMenu .Menu:hover,
+html body.Dark .Screen > .TitleBar > .Left *
+{
+	color: #e0e0e0;
+}
+
+body.Dark #DoorsScreen .Left > .VirtualWorkspaces > div.Active 
+{
+	border: 0;
+}
+
+[mobile].Dark .View.IconWindow .MobileFileBrowser > .FileBrowser .DiskItem > .Name,
+[mobile].Dark .View .FileDialog .FileBrowser .DiskItem > .Name,
+[mobile].Dark .View.IconWindow .MobileFileBrowser > .FileBrowser .FileBrowserItemImage,
+[mobile].Dark .View .FileDialog .FileBrowser .FileBrowserItemImage
+{
+	color: white;
+}
+[mobile].Dark .View.IconWindow .MobileFileBrowser > .FileBrowser .DiskItem > .Name:active,
+[mobile].Dark .View .FileDialog .FileBrowser .DiskItem > .Name:active
+{
+	background-color: rgba(255,255,255,0.2);
+}
+
+body.Dark .FileBrowserItemImage
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 16px;
+	height: 16px;
+	float: left;
+	vertical-align: middle;
+	display: block;
+	margin: 1px 4px 0 0;
+	filter: invert(100%);
+}
+
+body.Dark .Active > .FileBrowserItemImage,
+{
+	filter: invert(100%);
+}
+
+body.Dark .Frame .Progress
+{
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+
+/* Charcoal scheme scrollbars */
+
+body.Dark::-webkit-scrollbar
+body.Dark .View.Active ::-webkit-scrollbar
+{
+	background-color: rgba(0,0,0,0.6);
+}
+
+html body.Dark ::-webkit-scrollbar,
+html body.Dark ::-webkit-scrollbar-track,
+html body.Dark .View.Active ::-webkit-scrollbar-track,
+.Dark .View.Active.IconWindow ::-webkit-scrollbar-track,
+.Dark .View.IconWindow ::-webkit-scrollbar-track,
+html body.Dark.activated ::-webkit-scrollbar-track,
+html body.Dark .View.Active.IconWindow ::-webkit-scrollbar-track
+{
+	background-color: rgba(20,20,20,0.3) !important;
+	border-color: rgba(20,20,20,0.3) !important;
+}
+
+html body.Dark ::-webkit-scrollbar-thumb
+{
+	background-color: #383838 !important;
+	border-color: #303030;
+}
+
+html body.Dark .View.Active ::-webkit-scrollbar-thumb,
+html body.Dark.activated ::-webkit-scrollbar-thumb,
+html body.Dark .View.Active ::-webkit-scrollbar-thumb, 
+html body.Dark .View.Active.IconWindow ::-webkit-scrollbar-thumb
+{
+	background-color: #404040 !important;
+	border-color: #383838;
+}
+
+html body.Dark .Frame .Progress
+{
+	text-shadow: 1px 1px rgba(0,0,0,0.7);
+}
+

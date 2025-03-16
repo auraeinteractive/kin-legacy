@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-sftpdir_nonblock.dir/sftpdir_nonblock.c.o" -o example-sftpdir_nonblock  ../src/libssh2.a -lgcrypt 

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic CMakeFiles/test_password_auth_succeeds_with_correct_credentials.dir/test_password_auth_succeeds_with_correct_credentials.c.o -o test_password_auth_succeeds_with_correct_credentials  ../src/libssh2.a librunner.a libsession_fixture.a ../src/libssh2.a -lgcrypt libopenssh_fixture.a 

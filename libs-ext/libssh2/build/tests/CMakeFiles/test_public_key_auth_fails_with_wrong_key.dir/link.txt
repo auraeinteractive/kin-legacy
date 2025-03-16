@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic CMakeFiles/test_public_key_auth_fails_with_wrong_key.dir/test_public_key_auth_fails_with_wrong_key.c.o -o test_public_key_auth_fails_with_wrong_key  ../src/libssh2.a librunner.a libsession_fixture.a ../src/libssh2.a -lgcrypt libopenssh_fixture.a 

@@ -1,0 +1,8 @@
+{
+	"type":    "SQLDrive",
+	"short":   "Personal Storage",
+	"literal": "Personal Filesystem",
+	"group":   "Admin",
+	"sharing": "1",
+	"icon": "logo.png"
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<title>Friend UP</title>
+	<head>
+		<script onload="" src="/webclient/js/apps/api.js"></script>
+	</head>
+	<body class="Loading" onload="loginNow()">
+		<link rel="stylesheet" href="/webclient/css/extraLoginCSS.css"/>
+		<div id="LoginElement" style="visibility: hidden">
+			<div class="VContentTop">
+				<div class="Logo">
+					Friend OS
+				</div>
+				<h1>
+					Login to your Workspace
+				</h1>
+				<div class="Box">
+					<form method="post" onsubmit="return false">
+						<div class="HRow">
+							<p>
+								<label id="UsernameLabel" for="Username">Login</label>
+							</p>
+							<p>
+								<input type="username" id="Username" class="FullWidth" onkeydown="Application.checkKeys(event)" autocapitalize="none" autocorrect="none" tabindex="1" />
+							</p>
+						</div>
+						<div class="HRow MarginTop HideForPass">
+							<p>
+								<label id="PasswordLabel" for="Password">Password</label>
+							</p>
+							<p>
+								<input type="password" id="Password" class="FullWidth" onkeydown="Application.checkKeys(event)"  tabindex="2" />
+							</p>
+						</div>
+						<div class="HRow MarginTop Spacing">
+							<div class="HContent100 FlexContent">
+								<div class="FlexContent SmallGap">
+									<input tabindex="3" type="checkbox" id="remember"/><label for="remember">Remember</label>
+								</div>
+								<div class="FlexContent Right">
+									<button id="loginButton" class="IconSmall fa-unlock" tabindex="4" onclick="Application.doLogin()">
+										Sign in
+									</button>
+									<button id="forgotPassword" class="IconSmall fa-location-arrow" tabindex="-1000" onclick="Application.forgotPassword()">Forgot login</button>
+								</div>
+							</div>
+						</div>
+						<div id="invalidLogin" class="Padding"><p>&nbsp;</p></div>
+						<input type="hidden" id="publickey" value="{publickey}"/>
+					</form>
+					<hr/>
+					<div id="compatability" class="HRow MarginTop BorderTop HideForPass">
+						<p><strong>Compatibility information:</strong></p>
+						<p>Please use Google Chrome, Firefox. Experimental support for Safari, Opera and MS Edge.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			Application = {
+				inviteHash: false,
+				failedAttempt: false,
+				passwordRecoveryMode: false,
+				init: function( data )
+				{
+				},
+				doLogin: function( e )
+				{
+					/*
+						In password recivery mode we do stuff a bit differently...
+					*/
+					if( this.passwordRecoveryMode )
+					{
+						if( Trim( ge( 'Username' ).value ) == '')
+						{
+							ge( 'Username' ).focus();
+							ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = 'Enter your username.';
+							return;
+						}
+						ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = '';
+						parent.Friend.User.ResetPassword( Trim( ge( 'Username' ).value ), function( result ){
+							Application.forgotPassword();
+							if( ge( 'Username' ).value.indexOf( '@' ) > 1 ) 
+								ge( 'Username' ).value = '';
+							ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = ( result == 'ok' ? 'Please check your inbox.' : 'Could not reset password.' );
+						} );
+						return;
+					}
+					
+					if( ge( 'Username' ) || ge( 'Password' ) )
+					{
+						if( !Trim( ge( 'Username' ).value ) )
+							return ge( 'Username' ).focus();
+						if( !Trim( ge( 'Password' ).value ) )
+							return ge( 'Password' ).focus();
+					}
+					
+					// Don't do it many times while working!
+					if( this.busy ) return;
+					this.busy = true;
+					
+					if( this.failedAttempt )
+					{
+						ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = 'Logging in...';
+					}
+					
+					// Track user's login
+					if( typeof ga == 'function' ) ga( 'send', 'event', 'userloginattempt', Trim( ge( 'Username' ).value ) );
+					parent.Friend.User.Init();
+					let us = Trim( ge( 'Username' ).value );
+					let pw = Trim( ge( 'Password' ).value )
+					parent.Friend.User.Login( us, pw, ge( 'remember' ).checked, function( result, answer )
+					{
+						let tmp = null;
+						if( answer )
+						{
+							// Try to parse response answer
+							try
+							{
+								tmp = JSON.parse( answer );
+							}
+							catch( e )
+							{
+								console.log( 'Answer was not in json format: ', answer );
+							}
+							if( tmp && tmp.response )
+							{								//check for block....
+								if( tmp.response.indexOf( 'account blocked until:' ) > -1 )
+								{
+									let ts = tmp.response.replace( 'account blocked until:', '' );
+									if( parseInt( ts ) > 0 )
+									{
+										Application.errorMessage = 'Account blocked (try again after ' + new Date( ts * 1000 ).toLocaleString() + ')';
+										showLoginError();  
+										return;
+									}
+								}
+							}
+						}
+						
+						if( result == false )
+						{
+							showLoginError();
+						}
+						else if( result == 0 )
+						{
+							setTimeout( showLoginError, 1000 );
+						}
+						// Success!
+						else
+						{
+							//track users login..
+							if( typeof ga == 'function' )
+							{
+								ga( 'send', 'event', 'userloginsuccess', us );	
+							}
+							parent.Workspace.showDesktop();
+							Application.busy = false;
+						}
+					}, e, { hashedPassword: ge( 'Password' ).hashed ? true : false, inviteHash: Application.inviteHash } );
+				},
+				checkKeys: function( e )
+				{
+					var k = e.which ? e.which : e.keyCode;
+					if( k == 13 )
+					{
+						this.doLogin( e );
+					}
+				},
+				receiveMessage: function( msg )
+				{	
+					// TODO: Remove if not in any use ...
+					if( msg.command && msg.command == 'error' )
+					{
+						showLoginError();
+					}
+					else if( msg.cmd && msg.cmd == 'login' )
+					{
+						ge( 'Username' ).value = msg.username;
+						ge( 'Password' ).value = msg.password;
+						
+						Application.loginUser();
+					}
+				},
+				forgotPassword : function()
+				{
+					ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = '';
+					if( Application.passwordRecoveryMode )
+					{
+						Application.passwordRecoveryMode = false;
+						ge( 'loginButton' ).classList.remove( 'FloatRight' );
+						ge( 'loginButton' ).innerHTML = ' &nbsp; Log in';
+						ge( 'UsernameLabel' ).innerHTML = 'Login';
+						ge( 'forgotPassword' ).innerHTML = 'Forgot password';
+						document.querySelectorAll( '.HideForPass' ).forEach( function( thisNode ){
+							thisNode.style.display = thisNode.dataset.oldDisplay;
+						} );	
+						ge('loginButton').classList.remove( 'Forgot' );
+						return;
+					}
+					
+					Application.passwordRecoveryMode = true;
+					document.querySelectorAll( '.HideForPass' ).forEach( function( thisNode ){
+						thisNode.dataset.oldDisplay = thisNode.style.display;
+						thisNode.style.display = 'none';
+					} );	
+					ge( 'loginButton' ).classList.add( 'FloatRight' );
+					ge( 'loginButton' ).innerHTML = ' &nbsp; Request new password';
+					ge( 'loginButton' ).classList.add( 'Forgot' );
+					ge( 'UsernameLabel' ).innerHTML = 'Username / e-mail:';
+					ge( 'forgotPassword' ).innerHTML = 'Return to login form';
+				}
+			};
+			
+			function getInviteHash(  )
+			{
+				if( document.location.href && document.location.href.indexOf( 'invite=' ) >= 0 )
+				{
+					let invite = ( window.location.href.match( '[?&]invite=([^&]+)' ) && window.location.href.match( '[?&]invite=([^&]+)' )[1] ? window.location.href.match( '[?&]invite=([^&]+)' )[1] : '' );
+					
+					if( invite )
+					{
+						let json = false;
+						
+						if( invite.indexOf( 'BASE64' ) >= 0 )
+						{
+							try
+							{
+								decoded = atob( invite.split( 'BASE64' )[1] );
+								
+								if( decoded )
+								{
+									json = JSON.parse( decoded );
+									
+									Application.inviteHash = json.hash;
+									
+									if( ge( 'LoginElement' ).getElementsByTagName( 'h1' )[0] )
+									{
+										ge( 'LoginElement' ).getElementsByTagName( 'h1' )[0].innerHTML = 'Sign in and connect to ' + json.user;
+									}
+								}
+							}
+							catch {  }
+							
+							invite = invite.split( 'BASE64' )[0];
+						}
+						
+						if( !Application.inviteHash )
+						{
+							Application.inviteHash = invite;
+						}
+					}
+				}
+			}
+			
+			function showLoginError()
+			{
+				parent.Workspace.loginPrompt.setFlag( 'height', 263 );
+				ge( 'invalidLogin' ).getElementsByTagName( 'p' )[0].innerHTML = ( Application.errorMessage ? Application.errorMessage : 'Invalid credentials. Please check your input.' );
+				ge( 'Username' ).focus();
+				Application.failedAttempt = true;
+				Application.busy = false;
+				ge( 'LoginElement' ).style.visibility = 'visible';
+			}
+			
+			// Focus the username field
+			function loginNow( e )
+			{
+				if( typeof( GetCookie ) == 'undefined' ) return setTimeout( loginNow, 50 );
+				
+				Application.applicationId = 'loginprompt';
+				
+				getInviteHash();
+				
+				if( parent.GetUrlVar( 'username' ) )
+				{
+					ge( 'Username' ).value = parent.GetUrlVar( 'username' );
+					ge( 'Password' ).value = parent.GetUrlVar( 'password' );
+					ge( 'Password' ).hashed = true;
+					Application.doLogin( e );
+				}
+				
+				document.getElementById('LoginElement').style.visibility = 'visible';
+				document.getElementById('Username').focus();
+			}
+			let tk = parent.GetCookie( 'logintoken' );
+			if( tk )
+			{
+				parent.Friend.User.LoginWithLoginToken( tk );
+			}
+		</script>
+	</body>
+</html>

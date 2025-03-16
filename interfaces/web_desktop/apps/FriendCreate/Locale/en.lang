@@ -1,0 +1,192 @@
+
+
+i18n_allfiles                       : Browse
+i18n_openfiles                      : Files
+i18n_projects                       : Projects
+i18n_your_devices                   : Your disks
+
+i18n_open                           : Open
+i18n_save                           : Save
+i18n_save_as                        : Save as
+i18n_new_file                       : New file
+i18n_print                          : Print
+i18n_undo                           : Undo
+i18n_search_replace                 : Search & replace
+i18n_run_app                        : Run
+i18n_stop_app                       : Stop
+
+i18n_file_menu                      : File
+i18n_open_file                      : Open file
+
+i18n_are_you_sure                   : Are you sure?
+i18n_this_will_close                : This will close your current document.
+
+i18n_sure_disconnect_collab         : This will terminate your collaboration session immediately.
+
+menu_file                           : File
+menu_file_about                     : About Friend Create
+menu_file_manual                    : Manual
+menu_file_open                      : Open
+menu_file_save                      : Save
+menu_file_save_as                   : Save as
+menu_file_print                     : Print
+menu_file_close                     : Close
+menu_quit                           : Quit
+
+menu_templates                      : Templates
+menu_empty_application              : Empty application
+menu_application_scope              : Window application code
+menu_empty_fui_class                : Empty FUI class
+
+menu_project                        : Project
+menu_project_new                    : New project
+menu_project_open                   : Open project
+menu_project_close                  : Close project
+menu_project_editor                 : Project editor
+menu_project_save                   : Save project
+menu_project_save_as                : Save project as
+
+menu_packages                       : Packages
+menu_package_generate               : Generate package
+
+menu_collaboration                  : Collaboration
+menu_collaboration_invite           : Invite
+menu_collaboration_disconnect       : Disconnect
+
+i18n_invite_user                    : Invite a user
+i18n_invite_to_collab_session       : Invite users to a collaboration session
+i18n_invite_contact                 : Invite
+i18n_find_and_add_contacts          : Find and add contacts
+i18n_want_collaboration_session     : wants a collaboration session with you.
+i18n_collaborating                  : Collaborating
+i18n_accept_collab_request          : Accept collaboration request?
+i18n_this_will_remove_user_from_collab_sess : This will remove the user from this collaboration session.
+
+i18n_save_new_project               : Save new project
+
+i18n_users_manual                   : Users manual
+
+i18n_saving                         : Saving...
+i18n_saved                          : Saved.
+
+i18n_edit_files                     : Code view
+i18n_browse                         : Browse
+
+i18n_create_folder                  : Create folder
+
+# Project editor
+
+i18n_project_type                   : Project type
+i18n_web                            : Web
+i18n_enable_web_access_for_project  : Enable web access for project
+i18n_web_root                       : Web root
+i18n_standard_friend_project        : Friend project
+i18n_web_project_ssh                : Project using SSH
+
+
+i18n_host_server                    : Server
+i18n_host_username                  : Username
+i18n_host_password                  : Password
+i18n_host_path                      : Server path
+i18n_host_path_plh                  : /home/myuser/
+i18n_host_port                      : Port
+i18n_host_key                       : SSH Key
+i18n_host_server_plh                : myhost.com
+i18n_host_username_plh              : username
+i18n_host_password_plh              : password
+i18n_host_port_plh                  : 22
+
+i18n_project_editor                 : Project editor
+
+i18n_project_information            : Project information
+i18n_login_customization            : Customized login info
+i18n_project_name                   : Project name
+i18n_project_author                 : Author
+i18n_project_host                   : Server host
+i18n_project_version                : Version
+i18n_project_category               : Category
+i18n_project_description            : Description
+i18n_system_privileges              : System privileges
+i18n_add_privilege                  : Add privilege
+i18n_remove_privileges              : Remove privilege(s)
+i18n_application_images             : Application images
+i18n_project_files                  : Project files
+i18n_add_file                       : Add file
+i18n_remove_files                   : Remove file(s)
+i18n_project_has_no_files           : Project has no files.
+i18n_project_has_no_images          : Project has no images.
+i18n_project_has_no_permissions     : Project has no privileges.
+i18n_update_project                 : Save
+i18n_cancel                         : Close
+
+i18n_generate_package               : Build package
+i18n_install_package                : Install package
+i18n_toggle_application_canvas      : Toggle application canvas
+
+i18n_no_projects                    : Friend Create has no active projects.
+i18n_new_project                    : New project
+
+i18n_administration                 : Administration
+i18n_demonstration                  : Demonstration
+i18n_demo                           : Demo
+i18n_games                          : Games
+i18n_graphics                       : Graphics
+i18n_internet                       : Internet
+i18n_multimedia                     : Multimedia
+i18n_music                          : Music
+i18n_office                         : Office
+i18n_preferences                    : Preferences
+i18n_programming                    : Programming
+i18n_system                         : System
+
+i18n_bookmarks                      : Bookmarks
+
+i18n_mandatory_images               : Mandatory images
+i18n_image_icon                     : Icon image
+i18n_image_store_preview            : Preview image
+i18n_image_screenshot               : App screenshot
+
+i18n_add_images                     : Add images
+i18n_remove_images                  : Remove image(s)
+
+i18n_loading_project                : Loading project
+i18n_loading_project_desc           : Du you want to open this as a project?
+
+i18n_module                         : Module
+i18n_library                        : Library
+i18n_disk                           : Disk
+i18n_named_item                     : Named item...
+i18n_options                        : Options...
+
+i18n_unnamed_project                : Unnamed project
+
+i18n_no_project_saved               : Could not generate package
+i18n_no_project_desc                : Please save your project before you attempt to build a package.
+i18n_package_created                : A package was generated
+i18n_package_created_desc           : Your project package was built and is located in your project directory.
+i18n_error_occ                      : An error occured
+i18n_package_generation_error       : The package lacks properties in required to build it.
+
+i18n_generating_package             : Generating package...
+i18n_package_generated              : Package generated.
+
+i18n_copying_project                : Copying project...
+
+i18n_about_friend_create            : About Friend Create
+i18n_about_desc                     : Friend Create is a fully fledged Integrated Development Environment (IDE).
+i18n_close                          : Close
+
+i18n_search_keywords                : Search keyword
+i18n_replace_with                   : Replace with
+i18n_do_replace                     : Replace
+i18n_do_replace_all                 : Replace all
+
+i18n_failed_to_mount                : Mount failed on
+i18n_failed_to_mount_project_disk   : Failed to mount project disk. Please check your username, password, host name, port or path.
+
+i18n_failed_to_unmount              : Couldn't unmount
+i18n_failed_to_unmount_project_disk : Could not unmount your project disk. Perhaps the SSH connection is hanging?
+
+i18n_failed_to_add_fs               : Failed to add filesystem
+i18n_failed_to_add_fs_desc          : Something wrong happened when adding the filesystem. Please check your settings.
+

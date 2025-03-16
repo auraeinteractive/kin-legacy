@@ -1,0 +1,8 @@
+{
+	"type":    "SQLWorkgroupDrive",
+	"short":   "Workgroup Disk",
+	"literal": "Shared filesystem for workgroups",
+	"group":   "Admin",
+	"sharing": "1",
+	"icon": "logo.png"
+}

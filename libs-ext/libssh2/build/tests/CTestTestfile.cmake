@@ -1,0 +1,32 @@
+# CMake generated Testfile for 
+# Source directory: /home/hogne/Projects/friendup/libs-ext/libssh2/tests
+# Build directory: /home/hogne/Projects/friendup/libs-ext/libssh2/build/tests
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(test_hostkey "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_hostkey")
+set_tests_properties(test_hostkey PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_hostkey_hash "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_hostkey_hash")
+set_tests_properties(test_hostkey_hash PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_password_auth_succeeds_with_correct_credentials "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_password_auth_succeeds_with_correct_credentials")
+set_tests_properties(test_password_auth_succeeds_with_correct_credentials PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_password_auth_fails_with_wrong_password "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_password_auth_fails_with_wrong_password")
+set_tests_properties(test_password_auth_fails_with_wrong_password PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_password_auth_fails_with_wrong_username "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_password_auth_fails_with_wrong_username")
+set_tests_properties(test_password_auth_fails_with_wrong_username PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_public_key_auth_fails_with_wrong_key "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_public_key_auth_fails_with_wrong_key")
+set_tests_properties(test_public_key_auth_fails_with_wrong_key PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_public_key_auth_succeeds_with_correct_rsa_key "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_public_key_auth_succeeds_with_correct_rsa_key")
+set_tests_properties(test_public_key_auth_succeeds_with_correct_rsa_key PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_public_key_auth_succeeds_with_correct_encrypted_rsa_key "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_public_key_auth_succeeds_with_correct_encrypted_rsa_key")
+set_tests_properties(test_public_key_auth_succeeds_with_correct_encrypted_rsa_key PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_keyboard_interactive_auth_fails_with_wrong_response "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_keyboard_interactive_auth_fails_with_wrong_response")
+set_tests_properties(test_keyboard_interactive_auth_fails_with_wrong_response PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_keyboard_interactive_auth_succeeds_with_correct_response "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_keyboard_interactive_auth_succeeds_with_correct_response")
+set_tests_properties(test_keyboard_interactive_auth_succeeds_with_correct_response PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_agent_forward_succeeds "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_agent_forward_succeeds")
+set_tests_properties(test_agent_forward_succeeds PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(test_public_key_auth_succeeds_with_correct_dsa_key "/home/hogne/Projects/friendup/libs-ext/libssh2/build/tests/test_public_key_auth_succeeds_with_correct_dsa_key")
+set_tests_properties(test_public_key_auth_succeeds_with_correct_dsa_key PROPERTIES  WORKING_DIRECTORY "/home/hogne/Projects/friendup/libs-ext/libssh2/tests" _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;162;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")
+add_test(mansyntax "/usr/bin/sh" "-c" "srcdir=/home/hogne/Projects/friendup/libs-ext/libssh2/tests /home/hogne/Projects/friendup/libs-ext/libssh2/tests/mansyntax.sh")
+set_tests_properties(mansyntax PROPERTIES  _BACKTRACE_TRIPLES "/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;183;add_test;/home/hogne/Projects/friendup/libs-ext/libssh2/tests/CMakeLists.txt;0;")

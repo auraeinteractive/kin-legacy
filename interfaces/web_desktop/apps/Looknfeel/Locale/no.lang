@@ -1,0 +1,39 @@
+
+i18n_look_and_feel_title                : Utseende
+
+i18n_themes                             : Tema
+i18n_theme_engines                      : Tema motorer
+i18n_desktop                            : Skrivebord
+i18n_menu_mode                          : Meny modus
+i18n_preview                            : Forhåndsvisning
+i18n_cancel                             : Lukk
+i18n_save                               : Lagre
+i18n_customize_theme                    : Temainnstillinger
+
+i18n_no_theme_config                    : Dette temaet støtter ikke tilpasninger.
+
+i18n_available_themes                   : Tilgjengelige motorer
+i18n_directory_model                    : Filnavigasjonsmodus
+i18n_window_clicks                      : Ved klikking på vindu
+i18n_click_to_front                     : Flytt vindu øverst
+i18n_click_to_focus                     : Gi fokus
+i18n_browser                            : Navigasjon
+i18n_spacial                            : Romslig
+
+i18n_window_list_mode                   : Vinduslisten
+i18n_separated                          : Separat
+i18n_docked                             : I dock'en
+i18n_dockedlist                         : Liste i dock'en
+
+i18n_hidden_system                      : Gjemt System disk
+i18n_hide_system                        : Gjem System disk
+
+i18n_virtual_workspaces                 : Virtuelle arbeidsbord
+i18n_workspace_count                    : Antall arbeidsbord
+i18n_scrollable_desktop_icons           : Rullefelt for desktop ikoner
+i18n_hide_desktop_icons                 : Gjem desktop ikoner
+
+i18n_workspace_labels                   : Arbeidsbordikoner
+i18n_workspaces_to_label                : Ingen virtuelle arbeidsbord tilgjengelige.
+
+

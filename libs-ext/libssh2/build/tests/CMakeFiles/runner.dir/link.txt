@@ -1,0 +1,2 @@
+/usr/bin/ar qc librunner.a CMakeFiles/runner.dir/runner.c.o
+/usr/bin/ranlib librunner.a

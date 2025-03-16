@@ -1,0 +1,808 @@
+@font-face
+{
+	font-family: JetBrains;
+	src: url(/webclient/fonts/JetBrainsMono-Regular.ttf);
+}
+
+#Print
+{
+	visibility: hidden;
+	height: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+html body #Filetype > select
+{
+	padding: 2px !important;
+}
+
+@media print {
+    #Print
+    {
+    	position: absolute;
+    	width: 100%;
+    	top: 0;
+    	left. 0;
+        height: 100%;
+        visibility: visible;
+        overflow: visible;
+    }
+    body > div:not(#Print)
+    {
+    	display: none;
+    }
+}
+
+#TopPanel
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 60px;
+}
+
+#Toolbar button,
+html body #Toolbar button.IconButton:not(:hover), html body #Toolbar .Button.IconButton:not(:hover)
+{
+	vertical-align: bottom;
+	border: 0 !important;
+}
+
+#Toolbar .IconSmall.fc-package-build:before
+{
+	content: " ";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../Gfx/Icons/package_build_56.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    position: relative;
+    top: 3px;
+}
+
+#Toolbar .IconSmall.fc-package-install:before
+{
+	content: " ";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../Gfx/Icons/package_install_56.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    position: relative;
+    top: 6px;
+}
+
+#Toolbar .IconSmall.fc-package-install:hover:before,
+#Toolbar .IconSmall.fc-package-build:hover:before
+{
+	mask-image: url(../Gfx/Icons/package_install_56.png);
+	background-image: none;
+	background-color: #39658b;
+	mask-size: 100%;
+	mask-repeat: no-repeat;
+}
+#Toolbar .IconSmall.fc-package-build:hover:before
+{
+	mask-image: url(../Gfx/Icons/package_build_56.png);
+}
+
+#SideBar
+{
+	position: absolute;
+	left: 0;
+	top: 60px;
+	width: 280px;
+	height: calc(100% - 100px);
+}
+
+#SideBarTabs
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: height 0.15s;
+}
+
+#SideBarTabs > .Page
+{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 40px);
+	border-radius: 0 10px 10px 0;
+}
+
+#SideBar #SB_AllFiles
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#CodeArea, #app_canvas
+{
+	position: absolute;
+	left: 280px;
+	top: 60px;
+	width: calc(100% - 280px);
+	height: calc(100% - 100px);
+}
+
+#app_canvas
+{
+	left: 281px;
+	width: calc(100% - 281px);
+	z-index: 11;
+	overflow: hidden;
+	background-color: #2f2f2f;
+	border-radius: 10px 0 0 10px;
+	transition: background-color 0.25s;
+}
+
+#app_canvas.Running
+{
+	background-color: transparent;
+}
+
+#app_canvas iframe
+{
+	position: absolute;
+	border: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#app_canvas:not(.Showing)
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+/*#CodeArea.JetBrains .Page .ace_scroller,
+#CodeArea.JetBrains .ace_folding-enabled > .ace_gutter-cell
+{
+	font-family: JetBrains;
+	font-size: 0.9em;
+}*/
+
+#CodeArea .Page
+{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 40px);
+	border-radius: 10px 0 0 10px;
+}
+
+#CodeArea .Page .Minimap
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 121px;
+	height: auto;
+	background: black;
+	opacity: 0.8;
+	transition: top 0.25s;
+	padding: 0 0 0 5px;
+	box-sizing: border-box;
+	min-height: 100%;
+	cursor: pointer;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	z-index: 1;
+}
+
+#CodeArea .Page .Minimap > canvas
+{
+	transform: scale(0.3);
+	transform-origin: left top;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#CodeArea .Page .Minimap > div
+{
+	visibility: hidden;
+	pointer-events: none;
+}
+
+#CodeArea .Page .MinimapGroove
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 120px;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	z-index: 2;
+}
+
+#CodeArea .Page .MinimapRect
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 120px;
+	background: rgba(100,100,100,0.2);
+	pointer-events: all;
+	z-index: 1;
+	cursor: pointer;
+	transition-property: top, background;
+	transition-duration: 0.25s, 0.25s;
+	z-index: 3;
+}
+#CodeArea .Page .MinimapRect.Move
+{
+	transition-property: background;
+	transition-duration: 0.25s;
+	background: rgba(0,126,101,0.5);
+}
+
+#CodeArea .Page textarea.MinimapRow
+{
+	position: relative;
+	width: 100%;
+	white-space: pre;
+	text-overflow: hidden;
+	tab-size: 1;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	overflow: hidden;
+	color: #51D88C;
+	margin: 0;
+	background: none;
+	border: 0;
+	display: block;
+	font-family: monospace, courier, courier new;
+}
+
+#CodeArea .Page textarea.MinimapRow.Comment
+{
+	color: #ffff44;
+}
+
+#CodeArea .Page textarea.MinimapRow.If
+{
+	color: #ccff22;
+}
+
+#CodeArea .Page textarea.MinimapRow.Function
+{
+	color: #00ff77;
+}
+
+#CodeArea .Page textarea.MinimapRow.Function
+{
+	color: #77ff00;
+}
+
+#CodeArea .ace_editor
+{
+	overflow: visible;
+	right: 120px !important;
+}
+
+#CodeArea .Tab:before, #CodeArea .TabActive:before
+{
+	margin: 3px 0 0 10px;
+	float: right;
+}
+
+#SB_Project
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+#SB_Project ul
+{
+	list-style: none;
+	margin: 0 10px 0 10px;
+	padding: 0;
+}
+
+#SB_Project ul ul
+{
+	margin: 0 0 0 10px;
+}
+
+#SB_Project li
+{
+	margin: 5px 0 5px 0px;
+	padding: 4px;
+}
+
+#SB_Project
+{
+	margin-top: 5px;
+}
+
+#SB_Project ul ul ul li
+{
+	margin-top: 0;
+}
+
+#SB_Project li:before
+{
+	font-family: fontawesome;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+#SB_Project li.Project:first-child
+{
+	margin: 0;
+}
+
+#SB_Project li.Project
+{
+	padding: 5px;
+	margin: 0 0 5px 0;
+}
+
+#SB_Project li.Project.Current
+{
+	font-weight: bold;
+}
+
+#SB_Project li.Project.Current ul
+{
+	font-weight: normal;
+}
+
+#SB_Project li.Project:before
+{
+	content: "\f187";
+}
+
+#SB_Project li.Folder:not(.Open):before
+{
+	content: "\f07b";
+}
+
+#SB_Project li.Folder + ul
+{
+	transition: max-height 0.25s;
+	max-height: 0;
+	overflow: hidden;
+}
+
+#SB_Project li.Folder.Open + ul
+{
+	max-height: 2000px;
+}
+
+#SB_Project li.FileItem.Active
+{
+	background: rgba(0,0,0,0.15);
+}
+
+#SB_Project li.Folder:before
+{
+	content: "\f07c";
+}
+
+#SB_Project li.FileItem:before
+{
+	content: "\f15c";
+}
+
+#SB_Project li.FileItem.Reading:after
+{
+	content: "\f06e";
+	font-family: fontawesome;
+	margin: 0 0 0 5px;
+}
+
+#SB_Project li.FileItem.Editing:after
+{
+	content: "\f14b";
+	font-family: fontawesome;
+	margin: 0 0 0 5px;
+}
+
+#StatusBar
+{
+	position: absolute;
+	top: calc(100% - 40px);
+	left: 0;
+	width: 100%;
+	height: 40px;
+}
+
+#StatusMessage
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 40px;
+	width: 280px;
+	box-sizing: border-box;
+	overflow: hidden;
+	height: 40px;
+}
+
+#StatusMessage > div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	transition-property: left,opacity;
+	transition-duration: 0.25s,0.25s;
+}
+
+.FullImage
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.15);
+}
+
+.FullImage img
+{
+	margin-top: 50px;
+}
+
+#Search
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	transition: height 0.25s;
+	z-index: 10;
+	line-height: 40px;
+}
+
+#Search.Open
+{
+	height: 40px;
+}
+
+#Search input[type=text]
+{
+	width: 130px;
+}
+
+#Filetype
+{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+/* Mobile ------------------------------------------------------------------- */
+
+body[mobile] #SideBar
+{
+	transition: transform 0.25s;
+	width: 100%;
+	z-index: 5;
+}
+
+body[mobile]:not(.Editing) #SideBar
+{
+	transform: translate3d(0%,0,0);
+}
+
+body[mobile].Editing #SideBar
+{
+	transform: translate3d(-100%,0,0);
+}
+
+body[mobile] #CodeArea,
+body[mobile] #app_canvas
+{
+	transition: transform 0.25s;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+body[mobile] #StatusMessage
+{
+	left: auto;
+	right: 70px;
+	width: 110px;
+	pointer-events: none;
+}
+
+body[mobile] #CodeArea .ace_editor
+{
+	right: 0 !important;
+}
+
+body[mobile] .Minimap, [mobile] .MinimapRect, [mobile] .MinimapGroove
+{
+	pointer-events: none;
+	visibility: hidden;
+}
+
+body[mobile].Editing #CodeArea,
+body[mobile].Editing #app_canvas
+{
+	transform: translate3d(0%,0,0);
+}
+
+body[mobile]:not(.Editing) #CodeArea,
+body[mobile]:not(.Editing) #app_canvas
+{
+	transform: translate3d(-100%,0,0);
+}
+
+#MobileButtons
+{
+	margin-top: 4px;
+	padding: 1px 8px;
+}
+
+/* Collaboration ------------------------------------------------------------ */
+
+#CollabStatus
+{
+	position: absolute;
+	top: 17px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: transparent;
+	transition: background-color 0.2s;
+}
+
+#CollabStatus > span
+{
+	position: absolute;
+	right: 15px;
+	top: -4px;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+@keyframes greenpulse
+{
+	0% { background-color: #00aa00; }
+	50% { background-color: #00cc33; }
+	100% { background-color: #008811; }
+}
+@keyframes orangepulse
+{
+	0% { background-color: #aa7700; }
+	50% { background-color: #cc9900; }
+	100% { background-color: #aa7700; }
+}
+
+body.CollabHost #CollabStatus,
+body.CollabClient #CollabStatus
+{
+	animation: orangepulse 1s infinite;
+}
+body.CollabHost.ConnectionEstablished #CollabStatus,
+body.CollabClient.ConnectionEstablished #CollabStatus
+{
+	animation: greenpulse 1s infinite;
+}
+
+body.CollabHost #CollabStatus > span,
+body.CollabClient #CollabStatus > span
+{
+	opacity: 1;
+}
+
+/* Toggle */
+
+.CToggle
+{
+	position: absolute;
+	left: 285px;
+	height: 20px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+}
+
+body.CollabHost .CToggle
+{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.CToggle > .Info
+{
+	left: 45px;
+	position: absolute;
+}
+.CToggle > .Groove
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	width: 40px;
+	height: 20px;
+	border-radius: 15px;
+	overflow: hidden;
+	background-color: var(--BackgroundHeavier);
+}
+
+.CToggle > .Groove > .Knob
+{
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: var(--fui-checkbox);
+	border-radius: 15px;
+	transition: left,background-color 0.15s,0.15s;
+	cursor: pointer;
+}
+
+.CToggle.On > .Groove > .Knob
+{
+	position: absolute;
+	left: 50%;
+	background-color: var(--fui-checkbox-checked);
+	border-radius: 15px;
+}
+
+/* Participants */
+
+body.ConnectionEstablished #SideBar > .Tabs
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 150px);
+}
+
+body #SideBar > #Participants
+{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	overflow: hidden;
+	transition: height,top 0.15s,0.15s;
+}
+
+body.ConnectionEstablished #SideBar > #Participants
+{
+	position: absolute;
+	top: calc(100% - 145px);
+	height: 145px;
+}
+
+
+body #SideBar > #Participants > .header > p
+{
+	margin: 0;
+}
+
+body #SideBar > #Participants > .header
+{
+	position: absolute;
+	top: 0;
+	left: var(--PaddingBoxLarger);
+	width: calc(100% - var(--PaddingBoxLarger) - var(--PaddingBoxLarger));
+	height: 25px;
+	font-weight: bold;
+	border-bottom: 1px solid var(--ColorBorder);
+}
+
+body #SideBar > #Participants > .body
+{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 30px);
+	overflow: auto;
+	padding: 5px var(--PaddingBoxLarger);
+    box-sizing: border-box;
+}
+
+body #SideBar > #Participants .Participant
+{
+	border-radius: 10px;
+	display: flex;
+    background: var(--BackgroundHeavier);
+    padding: var(--PaddingButton) var(--PaddingBox);
+    vertical-align: middle;
+    margin: 0 0 5px 0;
+}
+
+body #SideBar > #Participants .Participant:last-child
+{
+	margin: 0;
+}
+
+body #SideBar > #Participants .Participant .Knob
+{
+	width: 15px;
+	position: relative;
+}
+
+body #SideBar > #Participants .Participant .Knob > span
+{
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	border-radius: 100%;
+	width: 8px;
+	height: 8px;
+}
+
+body #SideBar > #Participants .Participant .Name
+{
+	flex: 1;
+}
+
+body #SideBar > #Participants .Participant .Kick
+{
+	width: 15px;
+	cursor: pointer;
+	filter: contrast(1);
+	transform: filter 0.2s;
+}
+body #SideBar > #Participants .Participant .Kick:hover
+{
+	filter: contrast(0.2);
+}
+
+
+body #SideBar > #Participants .Participant .Kick:after
+{
+	content: "\f00d";
+	font-family: fontawesome;	
+}
+
+/* User colors */
+
+.User1 { background-color: #365D81; }
+.User2 { background-color: #75627A; }
+.User3 { background-color: #296140; }
+.User4 { background-color: #7B4B14; }
+.User5 { background-color: #A82E2E; }
+.User6 { background-color: #2A8192; }
+.User1, .User2, .User3, .User4, .User5, .User6
+{
+	position: absolute;
+}
+

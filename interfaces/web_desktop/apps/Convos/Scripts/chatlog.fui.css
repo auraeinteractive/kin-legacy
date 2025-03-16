@@ -1,0 +1,983 @@
+/**/
+
+.FUIChatlog
+{
+	opacity: 0;
+	transition: opacity 0.15s;
+}
+
+.FUIChatlog.Initialized
+{
+	opacity: 1;
+}
+
+.FUIChatlog .Topic,
+.FUIChatlog .ChannelInfo .ChannelTopic
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 35px;
+	background-color: var(--fui-menu-background);
+	color: var(--fui-menu-color);
+	text-align: center;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	font-weight: bold;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.FUIChatlog .Messages > div
+{
+    position: relative;
+    max-width: 800px;
+    display: block;
+    margin: auto;
+}
+
+.FUIChatlog .Messages
+{
+	position: absolute;
+	top: 35px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 35px);
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+    padding: 15px 15px 95px 15px;
+	background-color: var(--fui-background-foreground);
+	mask-image: linear-gradient(180deg, rgba(0,0,0,0.5) 0px, black 8px, black calc(100% - 95px), transparent calc(100% - 60px));
+	-webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.5) 0px, black 8px, black calc(100% - 95px), transparent calc(100% - 60px));
+}
+
+
+body[mobile] .FUIChatlog .Messages
+{
+	min-width: 100vw;
+}
+
+.FUIChatlog .Input
+{
+	position: absolute;
+	left: 0;
+	top: calc(100% - 80px);
+	width: 100%;
+	height: 80px;
+	background-color: var(--fui-background-dim);
+	color: var(--fui-menu-color);
+	justify-content: center;
+	z-index: 2;
+	display: flex;
+	padding: 15px 21px 15px 15px;
+	box-sizing: border-box;
+	overflow-x: clip;
+	overflow-y: visible;
+}
+
+.FUIChatlog .Input > div,
+.FUIChatlog .Input > .Tools > div
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    background-color: var(--fui-button-background);
+    color: var(--fui-button-color);
+    cursor: pointer;
+    transition: color,background-color 0.15s,0.15s;
+}
+
+.FUIChatlog .Input > div.Tools 
+{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+}
+
+.FUIChatlog .Input .Tools > div.Upload
+{
+    border-radius: 5px 0 0 5px;
+}
+
+.FUIChatlog .Input .Tools > div.Upload,
+.FUIChatlog .Input .Tools > div.Search
+{
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.FUIChatlog .Input .Tools .Search::after
+{
+    content: "\f002";
+    font-family: fontawesome;
+}
+
+.FUIChatlog .Input .Tools .Upload::after
+{
+    content: "\f0c6";
+    font-family: fontawesome;
+}
+
+.FUIChatlog .Input .Tools .MobileMen::after
+{
+    content: "\f142";
+    font-family: fontawesome;
+}
+
+.FUIChatlog .Input .Tools > .MobileMen
+{
+	display: none;
+}
+
+.FUIChatlog .Input .Send::after
+{
+    content: "\f1d9";
+    font-family: fontawesome;
+}
+
+.FUIChatlog .Input .Tools .Emote::after
+{
+    content: "\f004";
+    font-family: fontawesome;
+}
+
+.FUIChatlog .Input > div.Send
+{
+    border-radius: 0 5px 5px 0;
+}
+
+body:not([mobile]) .FUIChatlog .Input .Send:hover,
+body:not([mobile]) .FUIChatlog .Input .Emote:hover,
+body:not([mobile]) .FUIChatlog .Input .Upload:hover,
+body:not([mobile]) .FUIChatlog .Input .Search:hover,
+body:not([mobile]) .FUIChatlog .Input .MobileMen:hover,
+.FUIChatlog .Input .Send.Active,
+.FUIChatlog .Input .Emote.Active,
+.FUIChatlog .Input .Upload.Active,
+.FUIChatlog .Input .Search.Active,
+.FUIChatlog .Input .MobileMen.Active
+{
+    background-color: var(--fui-button-background-hover);
+    color: var(--fui-button-color-hover);
+}
+
+@media (max-width: 640px)
+{
+	.FUIChatlog .Input > div.Tools 
+	{
+		width: 50px;
+		border-radius: 5px 0 0 5px;
+	}
+	.FUIChatlog .Input > div.Tools > div:not(.MobileMen) 
+	{
+		display: none;
+	}
+	.FUIChatlog .Input .Tools > .MobileMen
+	{
+		display: inline-block;
+		border-radius: 5px 0 0 5px;
+	}
+	
+	.FUIChatlog .Input > div.Tools > .MobileMen.Active + div 
+	{
+		display: block;
+		position: absolute;
+		top: -35px;
+		width: 51px;
+		left: 15px;
+		border-radius: 0;
+		border: 0px;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
+	}
+	
+	.FUIChatlog .Input > div.Tools > .MobileMen.Active + div + div
+	{
+		top: -86px;
+		display: block;
+	    position: absolute;
+	    border: 0px;
+	    border-bottom: 1px solid rgba(0,0,0,0.05);
+	}
+	
+	.FUIChatlog .Input > div.Tools > .MobileMen.Active + div + div + div
+	{
+		top: -137px;
+		display: block;
+	    position: absolute;
+	    border: 0px;
+	    border-bottom: 1px solid rgba(0,0,0,0.05);
+	}
+}
+
+.FUIChatlog .Input > div.Textarea
+{
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.03);
+    max-width: 600px;
+	line-height: 18px;
+	display: inline-block;
+	flex-grow: 1;
+	outline: none;
+	top: 0;
+	left: 0;
+	width: calc(100% - 200px);
+	min-height: 50px;
+	height: fit-content;
+	max-height: 200px;
+	background: var(--fui-background-foreground);
+	color: var(--fui-color);
+	font-size: 16px;
+	box-sizing: border-box;
+	padding: 15px;
+	border-radius: 0;
+	margin: 0;
+	text-align: left;
+	cursor: text;
+}
+
+.FUIChatlog .Input > div.Textarea.Grown
+{
+    border-radius: 3px 3px 0 0;
+    overflow: auto;
+}
+
+
+.FUIChatlog .Input > div.Textarea span.Emoticon
+{
+    cursor: inherit;
+}
+
+.FUIChatlog .Message
+{
+	background-color: var(--fui-background);
+	color: var(--fui-color);
+	padding: 5px 15px 0 15px;
+	box-sizing: border-box;
+	margin: 10px 0 0 0;
+	opacity: 0;
+	transition: opacity 0.15s;
+	position: relative;
+	overflow: hidden;
+}
+
+.FUIChatlog .Message:after
+{
+	content: " ";
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-color: rgba(0,0,0,0);
+	transition: background-color 0.3s;
+}
+.FUIChatlog .Message:hover:after
+{
+	background-color: rgba(0,0,0,0.05);
+}
+
+.FUIChatlog .Message > .Toolbar
+{
+	position: absolute;
+	z-index: 5;
+	right: 16px;
+	top: 4px;
+	background-color: var(--fui-button-background);
+    color: var(--fui-button-color);
+	padding: 1px;
+	border-radius: 15px;
+	display: flex;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	overflow: hidden;
+}
+
+.FUIChatlog .Message:hover > .Toolbar
+{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.FUIChatlog .Message > .Toolbar > .ToolbarButton
+{
+	display: inline-block;
+	cursor: pointer;
+	margin: 0 5px 0 5px;
+	min-width: 16px;
+	text-align: center;
+	border-radius: 100%;
+}
+.FUIChatlog .Message > .Toolbar > .ToolbarButton:hover
+{
+	color: var(--fui-button-background);
+    background-color: var(--fui-button-color);
+}
+
+.FUIChatlog .Message > .Toolbar > .ToolbarButton.Delete:before
+{
+	content: "\f00d";
+	font-family: fontawesome;
+}
+
+.FUIChatlog .Message > .Toolbar > .ToolbarButton.Edit
+{
+	margin: 0 0 0 5px;
+}
+
+.FUIChatlog .Message > .Toolbar > .ToolbarButton.Edit:before
+{
+	content: "\f14b";
+	font-family: fontawesome;
+}
+
+.FUIChatlog .Message > .Text
+{
+	user-select: text;
+	line-height: 22px;
+}
+
+.Text:has(.AttachmentElement) 
+{
+    padding: 0 0 15px 0;
+}
+
+.FUIChatlog .Message > .Text .VideoCall
+{
+	user-select: none;
+	margin-bottom: 0 0 10px 0;
+}
+
+.FUIChatlog .Slot:first-child .Message
+{
+    margin: 0;
+}
+
+.Message.ConceilOwner 
+{
+    margin: 0;
+}
+
+.Message.FirstForOwner
+{
+	padding-top: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Message.OnlyMessage 
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.Message.FirstForOwner .Date, .Message.ConceilOwner:not(.LastForOwner) .Date,
+.Message.FirstForOwner .Date, .Message.ConceilOwner:not(.LastForOwner) .Text::after
+{
+    display: none;
+}
+
+.FUIChatlog .Message.Showing.MessageDateDivider
+{
+	margin: 20px auto;
+    display: block;
+    text-align: center;
+    background-color: transparent;
+}
+
+.Message.ConceilOwner.LastForOwner
+{
+	padding-bottom: 15px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.FUIChatlog .Message p
+{
+    margin: 0 0 10px 0;
+}
+
+.FUIChatlog .Message p:last-child
+{
+    margin: 0;
+}
+
+.FUIChatlog .Message p.Date
+{
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    font-size: 13px;
+    opacity: 1;
+    transition: opacity 0.15s;
+}
+
+.FUIChatlog .Message.Own[seen=yes] .Date:before 
+{
+    content: "\f00c";
+    font-family: 'fontawesome';
+    float: right;
+    margin: 0 0 0 2px;
+    clear: both;
+    color: var(--fui-palette-chan01);
+}
+
+body.Charcoal .FUIChatlog .Message.Own[seen=yes] .Date:before 
+{
+	color: var(--fui-palette-chan05);
+}
+
+.FUIChatlog .Message .Text::after 
+{
+    display: inline-block;
+    width: 100px;
+    background: transparent;
+    content: " ";
+    height: 10px;
+}
+
+.FUIChatlog .Messages .ImageError 
+{
+    font-family: 'fontawesome';
+    display: inline-block;
+    color: red;
+}
+
+.FUIChatlog .Messages .ImageError:before 
+{
+    content: "\f00d";
+}
+
+.FUIChatlog .Message.ConceilOwner .Nickname
+{
+    display: none;
+}
+
+.FUIChatlog .Message p.Date:hover
+{
+    opacity: 0.4;
+}
+
+.FUIChatlog .Message.Showing
+{
+	opacity: 1;
+}
+
+.FUIChatlog .Message .Name
+{
+    font-weight: bold;
+}
+
+.FUIChatlog .Message.Own
+{
+	background-color: var(--fui-palette-chan01-dimmer);
+    color: var(--fui-color);
+}
+
+.FUIChatlog .Message codeblock
+{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: auto;
+    font-family: monospace;
+    background-color: #151a1f;
+    border-radius: 10px;
+    padding: 10px;
+    color: #aaccdd;
+    font-size: 93%;
+    overflow-x: auto;
+}
+
+.FUIChatlog .Message codeblock div
+{
+	white-space: nowrap;
+}
+
+.FUIChatlog .Message .AttachmentElement 
+{
+    position: relative;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.FUIChatlog .Message .AttachmentElement > a
+{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 25px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 100%;
+    background-color: var(--BackgroundHeaviest);
+    transition: background-color 0.12s;
+}
+.FUIChatlog .Message .AttachmentElement > a:hover
+{
+	background-color: var(--fui-palette-chan02-dim);
+}
+.FUIChatlog .Message .AttachmentElement > a:before
+{
+	content: "\f0ed";
+	font-family: fontawesome;
+	color: white;
+}
+.FUIChatlog .Message .AttachmentElement > a.DownloadFull:before 
+{
+    margin: 0 6px 0 0;
+}
+
+.FUIChatlog .Message .AttachmentElement > a.DownloadFull 
+{
+    width: fit-content;
+    max-width: 100%;
+    right: auto;
+    bottom: auto;
+    display: block;
+    position: relative;
+    min-width: 130px;
+    color: var(--fui-color);
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin: 10px auto 10px auto;
+}
+
+.FUIChatlog .Message iframe.Attachment
+{
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid var(--fui-button-background);
+	background-color: var(--fui-palette-chan02-dim);
+	border-radius: 10px;
+}
+
+.FUIChatlog .Message .AttachmentElement .Preview.PDF 
+{
+    min-height: 300px;
+    width: 100%;
+    color: var(--fui-color);
+    background-color: var(--fui-background);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.FUIChatlog .Message img.Attachment 
+{
+    max-width: 512px !important;
+    width: 100% !important;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 0 auto;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+html .FUIChatlog .Message img.Attachment.ActualSize
+{
+	width: auto !important;
+}
+
+.FUIChatlog .Message img.Attachment.Loaded
+{
+	opacity: 1;
+}
+
+.FUIChatlog .Message .VideoCall
+{
+	display: block;
+	border-radius: 10px;
+	max-width: 100%;
+	width: fit-content;
+	color: var(--fui-menu-color);
+	background-color: var(--fui-palette-chan02);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    margin: auto;
+}
+
+.FUIChatlog .Message .VideoCall:hover
+{
+	box-shadow: 0px 0px 2px 1px rgba(255,255,255,255);
+}
+
+.FUIChatlog .Message .VideoCall:before
+{
+	content: "\f03d";
+	font-family: FontAwesome;
+	padding: 10px;
+	display: inline-block;
+	background: white;
+	color: black;
+	border-radius: 100%;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+}
+
+@keyframes glassanim
+{
+    0% { transform: rotate(360deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.FUIChatlog .Queue > .Message::before
+{
+    content: "\f252";
+    font-family: fontawesome;
+    animation-name: glassanim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    pointer-events: none;
+}
+
+.FUIChatlog .Emoji
+{
+    font-family: Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,Android Emoji,EmojiSymbols,EmojiOne Mozilla,Twemoji Mozilla,Segoe UI Symbol,Noto Color Emoji Compat,emoji,noto-emojipedia-fallback;
+    font-weight: 400;
+    font-size: 18px;
+    vertical-align: bottom;
+    filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.2));
+}
+
+.FUIPopwidget p > strong.Header
+{
+    color: var(--fui-menu-color);
+    font-weight: bold;
+}
+
+.EmojiList
+{
+    text-align: justify;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+span.Emoticon
+{
+    font-family: Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,Android Emoji,EmojiSymbols,EmojiOne Mozilla,Twemoji Mozilla,Segoe UI Symbol,Noto Color Emoji Compat,emoji,noto-emojipedia-fallback;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+span.Emoticon:hover
+{
+    filter: drop-shadow(0px 2px 6px rgba(255,255,255,0.4));
+}
+
+.FUIChatlog .Messages .WebLinkPreview 
+{
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.15s;
+    margin: 10px 0 10px 0;
+}
+
+.FUIChatlog .Messages .WebLinkPreview p.WebLinkP,
+.FUIChatlog .Messages .WebLinkPreview p.OGSite
+{
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--fui-module-background);
+    color: var(--fui-module-color);
+    margin: 0;
+}
+.FUIChatlog .Messages .WebLinkPreview p.OGSite
+{
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.FUIChatlog .Messages div.OGImage > img
+{
+    width: max-content;
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: height 0.1s;
+}
+
+.FUIChatlog .Messages .WebLinkPreview p.WebLinkP
+{
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.FUIChatlog .Messages .WebLinkPreview p.WebLinkP a
+{
+    color: var(--fui-module-color);
+    text-decoration: underline;
+}
+
+.FUIChatlog .Messages a.WebLink.Bold.Centered
+{
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.FUIChatlog .Messages .WebLinkPreview.Showing
+{
+    opacity: 1;
+}
+
+.FUIChatlog .Messages .WebLinkPreview .OGImage
+{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    background-color: black;
+}
+
+.FUIChatlog .Topic.Chatroom > .Video
+{
+	display: none;
+}
+
+.FUIChatlog .ChannelInfo
+{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 0px;
+	max-width: 100%;
+	display: none;
+	transition: left,width 0.15s,0.15s;
+	height: 100%;
+	background: var(--fui-list-background);
+}
+
+@media (max-width: 480px)
+{
+    html .FUIChatlog .ChannelInfo.Showing
+	{
+		left: 0;
+		width: 100%;
+		z-index: 11;
+	}
+}
+
+.FUIChatlog .ChannelInfo.Showing
+{
+	left: calc(100% - 320px);
+	width: 320px;
+	display: block;
+}
+
+.FUIChatlog .ChannelInfo .Info
+{
+	position: absolute;
+	left: 0;
+	top: 35px;
+	width: 100%;
+	height: calc(100% - 35px);
+	overflow: auto;
+	scroll-behavior: smooth;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.FUIChatlog .ChannelInfo .Info .Avatar
+{
+	display: block;
+	width: 100%;
+	min-height: 240px;
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	background-color: var(--fui-module-background);
+}
+
+.FUIChatlog.ChannelInfoShowing .Messages,
+.FUIChatlog.ChannelInfoShowing .Input,
+.FUIChatlog.ChannelInfoShowing .Topic
+{
+	max-width: calc(100% - 320px);
+}
+
+.FUIChatlog .ChannelInfo .ChannelTopic > .Close
+{
+	position: absolute;
+	width: 35px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 35px;
+}
+
+.FUIChatlog .ChannelInfo .ChannelTopic > .Title
+{
+	position: absolute;
+	box-sizing: border-box;
+	text-align: left;
+	width: calc(100% - 35px);
+	height: 100%;
+	left: 35px;
+	top: 0;
+	line-height: 35px;
+	padding: 0 10px 0 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.FUIChatlog .ChannelInfo .ChannelTopic > .Close:after
+{
+	display: block;
+	content: "\f00d";
+	color: var(--fui-module-color);
+	font-family: fontawesome;
+}
+
+@media (min-width: 769px)
+{
+	.FUIChatlog .Topic > .Video
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 4px;
+		height: 25px;
+		border-radius: 13px;
+	}
+
+	.FUIChatlog .Topic > .Video
+	{
+		background: var(--fui-module-background-darker);
+		left: calc(100% - 40px);
+		width: 22px;
+		text-align: center;
+		line-height: 26px;
+		padding: 0px 4px 0 4px;
+	}
+
+	.FUIChatlog .Topic > .Video::before
+	{
+		display: static;
+		margin: 0;
+		content: "\f03d";
+		font-family: fontawesome;
+		font-weight: 100;
+	}
+}
+
+@media (max-width: 768px)
+{
+	.FUIChatlog .Topic > .ParentLink,
+	.FUIChatlog .Topic > .Video,
+	.FUIChatlog .Topic > .Users 
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 4px;
+		height: 25px;
+		border-radius: 13px;
+	}
+   
+    .FUIChatlog .Topic > .ParentLink
+    {
+		background: var(--fui-module-background-darker);
+		left: 15px;
+		width: 22px;
+		text-align: center;
+		line-height: 26px;
+		padding: 0px 5px 0 2px;
+		
+    }
+
+    .FUIChatlog .Topic > .ParentLink::before
+    {
+        display: static;
+        margin: 0;
+        content: "\f0d9";
+        font-family: fontawesome;
+        font-weight: 100;
+    }
+    
+    .FUIChatlog .Topic > .Video
+    {
+        background: var(--fui-module-background-darker);
+		left: calc(100% - 80px);
+		width: 22px;
+		text-align: center;
+		line-height: 26px;
+		padding: 0px 4px 0 4px;
+    }
+    
+    .FUIChatlog .Topic > .Video::before
+    {
+        display: static;
+        margin: 0;
+        content: "\f03d";
+        font-family: fontawesome;
+        font-weight: 100;
+    }
+    
+    .FUIChatlog .Topic > .Users 
+    {
+		background: var(--fui-module-background-darker);
+		left: calc(100% - 47px);
+		width: 22px;
+		text-align: center;
+		line-height: 22px;
+		padding: 0px 4px 0 4px;
+    }
+
+    .FUIChatlog .Topic > .Users::before
+    {
+        display: static;
+        margin: 0;
+        content: "\f0c0";
+        font-size: 12px;
+        font-weight: 100;
+        font-family: fontawesome;
+    }
+    
+}
+

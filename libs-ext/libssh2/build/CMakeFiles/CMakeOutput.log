@@ -1,0 +1,770 @@
+The system is: Linux - 5.8.0-43-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: -fPIC
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/3.16.3/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fc306/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fc306.dir/build.make CMakeFiles/cmTC_fc306.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc306.dir/testCCompiler.c.o
+/usr/bin/cc   -fPIC    -o CMakeFiles/cmTC_fc306.dir/testCCompiler.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_fc306
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc306.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC     -rdynamic CMakeFiles/cmTC_fc306.dir/testCCompiler.c.o  -o cmTC_fc306 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a3aff/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a3aff.dir/build.make CMakeFiles/cmTC_a3aff.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -fPIC    -v -o CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-HskZEa/gcc-9-9.3.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
+COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o -version -fPIC -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccn5gb7d.s
+GNU C17 (Ubuntu 9.3.0-17ubuntu1~20.04) version 9.3.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/9/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (Ubuntu 9.3.0-17ubuntu1~20.04) version 9.3.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: bbf13931d8de1abe14040c9909cb6969
+COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o /tmp/ccn5gb7d.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_a3aff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3aff.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC    -v -rdynamic CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o  -o cmTC_a3aff 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-HskZEa/gcc-9-9.3.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fPIC' '-v' '-rdynamic' '-o' 'cmTC_a3aff' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4BsPUH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a3aff /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-fPIC' '-v' '-rdynamic' '-o' 'cmTC_a3aff' '-mtune=generic' '-march=x86-64'
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/9/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_a3aff/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a3aff.dir/build.make CMakeFiles/cmTC_a3aff.dir/build]
+  ignore line: [make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -fPIC    -v -o CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-HskZEa/gcc-9-9.3.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o -version -fPIC -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccn5gb7d.s]
+  ignore line: [GNU C17 (Ubuntu 9.3.0-17ubuntu1~20.04) version 9.3.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Ubuntu 9.3.0-17ubuntu1~20.04) version 9.3.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: bbf13931d8de1abe14040c9909cb6969]
+  ignore line: [COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o /tmp/ccn5gb7d.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fPIC' '-v' '-o' 'CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_a3aff]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3aff.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc -fPIC    -v -rdynamic CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o  -o cmTC_a3aff ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.3.0-17ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-HskZEa/gcc-9-9.3.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fPIC' '-v' '-rdynamic' '-o' 'cmTC_a3aff' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4BsPUH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a3aff /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc4BsPUH.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a3aff] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
+    arg [CMakeFiles/cmTC_a3aff.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9] ==> [/usr/lib/gcc/x86_64-linux-gnu/9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_aeef6/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_aeef6.dir/build.make CMakeFiles/cmTC_aeef6.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aeef6.dir/HAVE_UNISTD_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_aeef6.dir/HAVE_UNISTD_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c
+Linking C executable cmTC_aeef6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeef6.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_aeef6.dir/HAVE_UNISTD_H.c.o  -o cmTC_aeef6 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_46b17/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_46b17.dir/build.make CMakeFiles/cmTC_46b17.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_46b17.dir/HAVE_INTTYPES_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_46b17.dir/HAVE_INTTYPES_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c
+Linking C executable cmTC_46b17
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46b17.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_46b17.dir/HAVE_INTTYPES_H.c.o  -o cmTC_46b17 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8184c/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8184c.dir/build.make CMakeFiles/cmTC_8184c.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8184c.dir/HAVE_STDLIB_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_8184c.dir/HAVE_STDLIB_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_STDLIB_H.c
+Linking C executable cmTC_8184c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8184c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_8184c.dir/HAVE_STDLIB_H.c.o  -o cmTC_8184c 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/select.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e801/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0e801.dir/build.make CMakeFiles/cmTC_0e801.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e801.dir/HAVE_SYS_SELECT_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_0e801.dir/HAVE_SYS_SELECT_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SELECT_H.c
+Linking C executable cmTC_0e801
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e801.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_0e801.dir/HAVE_SYS_SELECT_H.c.o  -o cmTC_0e801 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/uio.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_aeb99/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_aeb99.dir/build.make CMakeFiles/cmTC_aeb99.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aeb99.dir/HAVE_SYS_UIO_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_aeb99.dir/HAVE_SYS_UIO_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UIO_H.c
+Linking C executable cmTC_aeb99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeb99.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_aeb99.dir/HAVE_SYS_UIO_H.c.o  -o cmTC_aeb99 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/socket.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_14919/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_14919.dir/build.make CMakeFiles/cmTC_14919.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_14919.dir/HAVE_SYS_SOCKET_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_14919.dir/HAVE_SYS_SOCKET_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKET_H.c
+Linking C executable cmTC_14919
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14919.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_14919.dir/HAVE_SYS_SOCKET_H.c.o  -o cmTC_14919 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/ioctl.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5e213/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5e213.dir/build.make CMakeFiles/cmTC_5e213.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5e213.dir/HAVE_SYS_IOCTL_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_5e213.dir/HAVE_SYS_IOCTL_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c
+Linking C executable cmTC_5e213
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e213.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_5e213.dir/HAVE_SYS_IOCTL_H.c.o  -o cmTC_5e213 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ded91/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ded91.dir/build.make CMakeFiles/cmTC_ded91.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ded91.dir/HAVE_SYS_TIME_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_ded91.dir/HAVE_SYS_TIME_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c
+Linking C executable cmTC_ded91
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ded91.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_ded91.dir/HAVE_SYS_TIME_H.c.o  -o cmTC_ded91 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files sys/un.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c8c31/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c8c31.dir/build.make CMakeFiles/cmTC_c8c31.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8c31.dir/HAVE_SYS_UN_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_c8c31.dir/HAVE_SYS_UN_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UN_H.c
+Linking C executable cmTC_c8c31
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8c31.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_c8c31.dir/HAVE_SYS_UN_H.c.o  -o cmTC_c8c31 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7431/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a7431.dir/build.make CMakeFiles/cmTC_a7431.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7431.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_a7431.dir/CheckIncludeFile.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a7431
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7431.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_a7431.dir/CheckIncludeFile.c.o  -o cmTC_a7431 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7dc8d/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7dc8d.dir/build.make CMakeFiles/cmTC_7dc8d.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7dc8d.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_7dc8d.dir/CheckIncludeFile.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_7dc8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dc8d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_7dc8d.dir/CheckIncludeFile.c.o  -o cmTC_7dc8d 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_296ec/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_296ec.dir/build.make CMakeFiles/cmTC_296ec.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_296ec.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_296ec.dir/CheckIncludeFile.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_296ec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_296ec.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_296ec.dir/CheckIncludeFile.c.o  -o cmTC_296ec 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_164f8/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_164f8.dir/build.make CMakeFiles/cmTC_164f8.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_164f8.dir/LONGLONG.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_164f8.dir/LONGLONG.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckTypeSize/LONGLONG.c
+Linking C executable cmTC_164f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_164f8.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_164f8.dir/LONGLONG.c.o  -o cmTC_164f8 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the gettimeofday exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c1be/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6c1be.dir/build.make CMakeFiles/cmTC_6c1be.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c1be.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_6c1be.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6c1be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c1be.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_6c1be.dir/CheckSymbolExists.c.o  -o cmTC_6c1be 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettimeofday
+  return ((int*)(&gettimeofday))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strtoll exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_66f6c/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_66f6c.dir/build.make CMakeFiles/cmTC_66f6c.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66f6c.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_66f6c.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_66f6c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66f6c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_66f6c.dir/CheckSymbolExists.c.o  -o cmTC_66f6c 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the snprintf exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5dc3c/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5dc3c.dir/build.make CMakeFiles/cmTC_5dc3c.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5dc3c.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_5dc3c.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_5dc3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dc3c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_5dc3c.dir/CheckSymbolExists.c.o  -o cmTC_5dc3c 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function poll exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c6d5d/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c6d5d.dir/build.make CMakeFiles/cmTC_c6d5d.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c6d5d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=poll   -o CMakeFiles/cmTC_c6d5d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c6d5d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6d5d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall -DCHECK_FUNCTION_EXISTS=poll    -rdynamic CMakeFiles/cmTC_c6d5d.dir/CheckFunctionExists.c.o  -o cmTC_c6d5d 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function socket exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_93deb/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_93deb.dir/build.make CMakeFiles/cmTC_93deb.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93deb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=socket   -o CMakeFiles/cmTC_93deb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_93deb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93deb.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall -DCHECK_FUNCTION_EXISTS=socket    -rdynamic CMakeFiles/cmTC_93deb.dir/CheckFunctionExists.c.o  -o cmTC_93deb 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function select exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e7cad/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e7cad.dir/build.make CMakeFiles/cmTC_e7cad.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7cad.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=select   -o CMakeFiles/cmTC_e7cad.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7cad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7cad.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall -DCHECK_FUNCTION_EXISTS=select    -rdynamic CMakeFiles/cmTC_e7cad.dir/CheckFunctionExists.c.o  -o cmTC_e7cad 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function inet_addr exists passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cbb9d/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cbb9d.dir/build.make CMakeFiles/cmTC_cbb9d.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cbb9d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -Wall -DCHECK_FUNCTION_EXISTS=inet_addr   -o CMakeFiles/cmTC_cbb9d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cbb9d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbb9d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall -DCHECK_FUNCTION_EXISTS=inet_addr    -rdynamic CMakeFiles/cmTC_cbb9d.dir/CheckFunctionExists.c.o  -o cmTC_cbb9d 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test HAVE_O_NONBLOCK succeeded with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed198/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ed198.dir/build.make CMakeFiles/cmTC_ed198.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed198.dir/src.c.o
+/usr/bin/cc   -fPIC -Wall -DHAVE_O_NONBLOCK   -o CMakeFiles/cmTC_ed198.dir/src.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/src.c
+/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/src.c:24:17: warning: ‘flags’ is used uninitialized in this function [-Wuninitialized]
+   24 |     int flags = fcntl(socket, F_SETFL, flags | O_NONBLOCK);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/src.c:24:17: warning: ‘socket’ is used uninitialized in this function [-Wuninitialized]
+Linking C executable cmTC_ed198
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed198.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall -DHAVE_O_NONBLOCK    -rdynamic CMakeFiles/cmTC_ed198.dir/src.c.o  -o cmTC_ed198  /usr/lib/x86_64-linux-gnu/libgcrypt.so 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+#if defined(sun) || defined(__sun__) || defined(__SUNPRO_C) || defined(__SUNPRO_CC)
+# if defined(__SVR4) || defined(__srv4__)
+#  define PLATFORM_SOLARIS
+# else
+#  define PLATFORM_SUNOS4
+# endif
+#endif
+#if (defined(_AIX) || defined(__xlC__)) && !defined(_AIX41)
+# define PLATFORM_AIX_V3
+#endif
+
+#if defined(PLATFORM_SUNOS4) || defined(PLATFORM_AIX_V3) || defined(__BEOS__)
+#error "O_NONBLOCK does not work on this platform"
+#endif
+
+int main()
+{
+    int socket;
+    int flags = fcntl(socket, F_SETFL, flags | O_NONBLOCK);
+}
+Determining if files arpa/inet.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7da97/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7da97.dir/build.make CMakeFiles/cmTC_7da97.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7da97.dir/HAVE_ARPA_INET_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_7da97.dir/HAVE_ARPA_INET_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_ARPA_INET_H.c
+Linking C executable cmTC_7da97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7da97.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_7da97.dir/HAVE_ARPA_INET_H.c.o  -o cmTC_7da97 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if files netinet/in.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c02f2/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c02f2.dir/build.make CMakeFiles/cmTC_c02f2.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c02f2.dir/HAVE_NETINET_IN_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_c02f2.dir/HAVE_NETINET_IN_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_NETINET_IN_H.c
+Linking C executable cmTC_c02f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c02f2.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_c02f2.dir/HAVE_NETINET_IN_H.c.o  -o cmTC_c02f2 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the strcasecmp exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ddc62/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ddc62.dir/build.make CMakeFiles/cmTC_ddc62.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ddc62.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_ddc62.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ddc62
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddc62.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_ddc62.dir/CheckSymbolExists.c.o  -o cmTC_ddc62 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <strings.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the __func__ exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0504d/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0504d.dir/build.make CMakeFiles/cmTC_0504d.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0504d.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_0504d.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0504d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0504d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_0504d.dir/CheckSymbolExists.c.o  -o cmTC_0504d 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __func__
+  return ((int*)(&__func__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the __FUNCTION__ exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_79fc5/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_79fc5.dir/build.make CMakeFiles/cmTC_79fc5.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79fc5.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_79fc5.dir/CheckSymbolExists.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_79fc5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79fc5.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_79fc5.dir/CheckSymbolExists.c.o  -o cmTC_79fc5 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+File /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __FUNCTION__
+  return ((int*)(&__FUNCTION__))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files sys/param.h exist passed with the following output:
+Change Dir: /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f8406/fast && make[2]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f8406.dir/build.make CMakeFiles/cmTC_f8406.dir/build
+make[3]: Entering directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f8406.dir/HAVE_SYS_PARAM_H.c.o
+/usr/bin/cc   -fPIC -Wall    -o CMakeFiles/cmTC_f8406.dir/HAVE_SYS_PARAM_H.c.o   -c /home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c
+Linking C executable cmTC_f8406
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8406.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -Wall     -rdynamic CMakeFiles/cmTC_f8406.dir/HAVE_SYS_PARAM_H.c.o  -o cmTC_f8406 
+make[3]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/hogne/Projects/friendup/libs-ext/libssh2/build/CMakeFiles/CMakeTmp'
+
+
+

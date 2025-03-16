@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-scp_write.dir/scp_write.c.o" -o example-scp_write  ../src/libssh2.a -lgcrypt 

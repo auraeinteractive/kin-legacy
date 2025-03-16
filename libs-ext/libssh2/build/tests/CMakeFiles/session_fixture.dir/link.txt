@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsession_fixture.a CMakeFiles/session_fixture.dir/session_fixture.c.o
+/usr/bin/ranlib libsession_fixture.a

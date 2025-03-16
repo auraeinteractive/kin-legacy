@@ -1,0 +1,125 @@
+			
+			<!-- comment in when we can access remove friend cores!
+			<div class="HRow">
+				<p class="Layout">
+					<strong>
+						{i18n_connection_details}:
+					</strong>
+				</p>
+			</div>
+			<div class="HRow">
+				<div class="HContent70 FloatLeft">
+					<p class="Layout">
+						<input type="text" id="Server" class="FullWidth" value="" placeholder="Server address/IP..."/>
+					</p>
+				</div>
+				<div class="HContent30 FloatLeft" style="padding-left: 10px">
+					<p class="Layout">
+						<input type="text" id="Port" class="FullWidth" value="" placeholder="Port..."/>
+					</p>
+				</div>
+			</div>-->
+			<!-- Comment back in when we're allowing other friend cores
+			<div class="HRow">
+				<p class="Layout">
+					<strong>
+						{i18n_login_info}:
+					</strong>
+				</p>
+			</div>
+			<div class="HRow">
+				<div class="HContent35 FloatLeft">
+					<p class="Layout">
+						<input type="text" id="Username" class="FullWidth" style="width: 95%" value="" placeholder="{i18n_username}"/>
+					</p>
+				</div>
+				<div class="HContent35 FloatLeft">
+					<p class="Layout">
+						<input type="password" id="Password" class="FullWidth" value="" placeholder="Password"/>
+					</p>
+				</div>
+			</div>-->
+			<div class="HRow" id="DiskSizeContainer">
+				<div class="HContent30 FloatLeft">
+					<p class="Layout InputHeight">
+						<strong>
+							{i18n_disksize}:
+						</strong>
+					</p>
+				</div>
+				<div class="HContent70 FloatLeft">
+					<p class="Layout InputHeight">
+						<input type="text" id="conf.DiskSize" class="FullWidth" value="" placeholder="500MB"/>
+					</p>
+				</div>
+			</div>
+			<div class="HRow">
+				<div class="HContent30 FloatLeft">
+					<p class="Layout InputHeight">
+						<strong>
+							{i18n_workgroup}:
+						</strong>
+					</p>
+				</div>
+				<div class="HContent70 FloatLeft">
+					<p class="Layout InputHeight" id="WorkgroupContainer">
+						<input type="text" id="Workgroup" class="FullWidth" value="" placeholder="{i18n_workgroup_name}..."/>
+					</p>
+				</div>
+			</div>
+			<div class="HRow">
+				<div class="HContent30 FloatLeft">
+					<p class="Layout InputHeight">
+						<strong>
+							{i18n_notes}:
+						</strong>
+					</p>
+				</div>
+				<div class="HContent70 FloatLeft">
+					<p class="Layout InputHeight">
+						<input type="text" id="ShortDescription" class="FullWidth" value="" placeholder="{i18n_your_notes}..."/>
+					</p>
+				</div>
+			</div>
+			
+			<!--<script src="devices/DOSDrivers/SQLWorkgroupDrive/gui.js"></script>-->
+			
+			<script>
+				
+				var m = new Module( 'system' );
+				m.onExecuted = function( e, d )
+				{
+					if( e == 'ok' && d )
+					{
+						try
+						{
+							d = JSON.parse( d );
+							
+							if( d )
+							{
+								var value = ge( 'Workgroup' ).value;
+								
+								var str = '';
+								
+								str += '<select id="Workgroup" class="FullWidth"><option value="">' + i18n( 'i18n_choose_workgroup' ) + '</option>';
+								
+								for( var k in d )
+								{
+									if( d[k] && d[k].Name )
+									{
+										str += '<option value="' + d[k].Name + '"' + ( value == d[k].Name ? ' selected="selected"' : '' ) + '>' + d[k].Name + '</option>';
+									}
+								}
+								
+								str += '</select>';
+								
+								ge( 'WorkgroupContainer' ).innerHTML = str;
+							}
+						}
+						catch( e ) {}
+					}
+				}
+				m.execute( 'workgroups', { connected: true } );
+				
+			</script>
+			

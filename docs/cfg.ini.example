@@ -1,0 +1,24 @@
+[DatabaseUser]
+
+host=localhost
+login=root
+password=root_password
+dbname=FriendMaster
+
+[FriendCore]
+fchost = localhost
+port = 6502
+fcupload = storage/
+
+[Core]
+SSLEnable=0
+port=6502
+
+[FriendNetwork]
+enabled = 0
+
+[FriendChat]
+enabled = 0
+
+
+

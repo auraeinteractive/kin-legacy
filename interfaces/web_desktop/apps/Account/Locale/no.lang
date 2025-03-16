@@ -1,0 +1,221 @@
+
+
+i18n_account                         : Min konto
+
+i18n_basic_information               : Hovedinformasjon
+i18n_full_name                       : Fullt navn
+i18n_username                        : Brukernavn
+i18n_change_password                 : Endre passord
+i18n_current_password                : Nåværende passord
+i18n_new_password                    : Nytt passord
+i18n_confirm                         : bekreftelse
+
+i18n_language                        : Språk
+i18n_workspace_mode                  : Arbeidsbord modus
+i18n_mode_gamified                   : Spillifisert
+i18n_mode_normal                     : Normal
+i18n_mode_developer                  : Utvikler
+
+i18n_are_you_sure                    : Er du sikker?
+i18n_deleting_desc                   : Når du sletter en gruppe vil alle tilknyttede medlemmer og annen data oppløses.
+i18n_this_will_remove                : Dette vil fjerne disken fra listen.
+
+i18n_no_description                  : Denne gruppen mangler beskrivelse.
+i18n_your_groups                     : Dine grupper
+
+i18n_delete_disk                     : Slett
+
+i18n_storage                         : Lagringsmedia
+
+i18n_more                            : flere...
+
+i18n_key_type              			 : Nøkkel type
+i18n_key_name              			 : Nøkkel navn
+i18n_key_password             	     : Nøkkel passord
+i18n_generate                        : Generer
+i18n_generate_keypair                : Generer Nøkkelpar
+
+i18n_extended_information            : Utvidet informasjon
+i18n_telephone                       : Telefon nummer
+i18n_email_address                   : E-mail adresse
+i18n_account_image                   : Passbilde
+i18n_save                            : Lagre
+i18n_cancel                          : Lukk
+i18n_back                            : Tilbake
+
+i18n_publickey                       : Fellesnøkkel
+
+i18n_key_information                 : Nøkkel informasjon
+i18n_your_apps                       : Dine applikasjoner
+i18n_available_storage               : Tilgjengelige disker
+i18n_unmounted_storage               : Frakoblede disker
+i18n_groups                          : Dine grupper
+
+i18n_no_apps                         : Status
+i18n_no_apps_desc                    : Ingen installert.
+
+i18n_added_by_admin                  : Lagt til av admin
+i18n_reason                          : Notis
+i18n_no_groups_available             : Du er ikke eier av noen grupper.
+i18n_failed_reading_groups           : Kunne ikke lese gruppene.
+i18n_create_group                    : Ny gruppe
+i18n_create_group_disabled           : Makimum av grupper nådd
+i18n_name                            : Navn
+i18n_group_description               : Gruppebeskrivelse
+i18n_find_users                      : Finn brukere
+i18n_group_members                   : Gruppemedlemmer
+i18n_no_users_connected_to_you       : Ingen (andre) brukere er tilknyttet din konto.
+i18n_invite_user_to_group            : Inviter bruker til gruppe
+i18n_no_users_connected_to_group     : Ingen brukere er tilknyttet gruppe.
+i18n_remove_from_group               : Fjern fra gruppe
+i18n_could_not_save_group            : Kunne ikke lagre gruppe
+i18n_an_error_occured_group_save     : En feil oppsto mens du prøvde å lagre gruppen. Vennligst prøv igjen.
+i18n_edit_group                      : Endre gruppen
+i18n_can_not_invite                  : Kan ikke sende invitasjon
+i18n_can_not_invite_desc             : Du kan ikke invitere til gruppen fordi den er ikke lagret.
+i18n_sure_remove_user_from           : Er du sikker på at du ønsker å fjerne brukeren fra gruppen?
+i18n_pending_invites                 : Ubesvarte invitasjoner
+
+i18n_find_groups                     : Finn grupper...
+
+i18n_add_storage                     : Mer lagringsplass
+i18n_edit_storage                    : Endre disk
+
+i18n_no_storage                      : Du har ikke lagringsplass.
+
+i18n_get_storage                     : Mer lagringsplass
+
+i18n_toggle_public_key_visibility    : Offentlig nøkkel
+
+i18n_password                        : Passord
+i18n_edit_password                   : Endre passord
+
+i18n_descheading                     : Legg til mer lagring 
+i18n_description                     : Vennligst velg hvilken type disk du ønsker å legge til. Noen tilbydere kan komme til å kreve en registrering.
+
+i18n_disk                            : disk
+i18n_add_a                           : Tilføy en
+i18n_edit                            : Endre
+i18n_delete                          : Slett
+
+i18n_disk_error                      : Disk feil
+i18n_failed_to_edit                  : Kunne ikke oppdatere disken.
+i18n_disk_success                    : Disk endret
+i18n_disk_edited                     : Diskendringene ble lagret.
+
+i18n_connection_details              : Nettverskdetaljer
+i18n_notes                           : Notater
+i18n_directory                       : Filsti på server
+i18n_login_info                      : Innloggingsinfo
+i18n_your_notes                      : Dine notater
+i18n_username                        : Brukernavn
+i18n_password                        : Passord
+i18n_host_port                       : Server port
+i18n_host_ip                         : Server adresse eller IP
+i18n_hostname                        : Server adresse
+i18n_workgroup_name                  : Din arbeidsgruppe
+i18n_choose_workgroup                : Velg arbeidsgruppe
+i18n_workgroup                       : Arbeidsgruppe
+i18n_device_name                     : Disk navn
+i18n_placeholder_connection          : Mindisk
+i18n_reset                           : Fjern
+
+i18n_timezone                        : Tidssone
+
+i18n_add_storage                     : Tilføy disk
+i18n_update_disk                     : Oppdater
+i18n_mount_disk                      : Monter disk
+i18n_unmount_disk                    : Avmonter disk
+i18_account2                         : Konto
+i18n_settings_saved                  : Instillinger lagret
+
+i18n_admin_managed_drive             : Denne disken er styrt av din administrator.
+
+i18n_key_password_confirm            : Bekreft passord
+i18n_pass_mis_desc                   : Passordene må stemme overens.
+i18n_password_mismatch               : Password mismatch!
+
+i18n_key_management                  : Nøkkeladministrasjon
+i18n_application                     : Applikasjoner
+i18n_options                         : Alternativer
+
+i18n_add_key                         : Legg til nøkkel
+i18n_data                            : Data
+
+i18n_close                           : Lukk
+i18n_encrypt                         : Krypter
+i18n_decrypt                         : Dekrypter
+
+i18n_system_wide                     : Hele systemet
+i18n_devices                         : Enheter
+
+i18n_generate_key                    : Generer nøkkel
+
+i18n_useravatar							: Avatar
+i18n_changeavatar						: Endring
+i18n_fileselectoravatar					: Vennligst velg et PNG-bilde
+
+i18n_your_public_key                 : Din offentlige nøkkel
+
+i18n_deleting_key                 : Sletting av nøkkel
+
+i18n_friendNetwork					 : Friend Network
+i18n_fnetActivate					 : Aktiver Friend Network
+i18n_fnetWorkgroup					 : Samfunnet
+i18n_fnetPassword					 : Samfunnet passord
+i18n_fnetRepeatPassword				 : Gjenta passord
+i18n_workgroupPlaceHolder			 : Skriv inn navnet på arbeidsgruppen, eller la det være tomt
+i18n_passwordNoMatch				 : Venne Nettverk arbeidsgruppe passord stemmer ikke overens.
+i18n_fnetAcceptFromAny				 : Godta meldinger fra personer som ikke er merket som venner
+i18n_fnetDescription                 : Beskriv deg selv
+i18n_fnetDownloadFiles				 : Last ned delte filer umiddelbart
+i18n_fnetDownloadPath				 : Sti
+i18n_fnetDownloadButton				 : Velg katalog
+i18n_fnetPleaseChooseDirectory		 : Vennligst velg en katalog...
+i18n_fnetShareLocalDrives			 : Monter lokale stasjoner på Friend Network
+i18n_fnetDeviceDescription			 : Enhetsbeskrivelse
+i18n_fnetDeviceName					 : Enhetsnavn
+i18n_fnetChangeDeviceAvatar			 : Endre bilde
+i18n_nameOfDevice					 : Skriv inn navnet på enheten her
+i18n_descriptionOfDevice			 : Skriv inn en beskrivelse
+i18n_device_information				 : Enhet
+i18n_deviceNotice					 : Denne informasjonssiden er spesifikk for enheten du bruker akkurat nå. Friend Network vil bruke det til å vise de forskjellige enhetene du bruker på et øyeblikk.
+i18n_fnetMountDrive					 : Monter vennenettverksdisken som sovende stasjon
+i18n_fnetAutoMountDrive				 : Vis vennenettverksikonet på arbeidsområdet
+
+i18n_update_language_warning         : Oppdaterer språk
+i18n_update_language_desc            : Når språkinnstillingen oppdateres må Friend Workspace startes på ny. Du vil miste alt som ikke er lagret i din nåværende økt. Er du sikker på at du ønsker å fortsette?
+
+i18n_fnetActivatePower				 : Aktiver strømdeling via vennnettverk
+i18n_fnetShareThisDevice			 : Del denne enheten
+i18n_fnetMaximumPercentage			 : Maksimalt antall maskintid for deling
+i18n_fnetAllowPowerApplications		 : Tillat applikasjoner å be om ekstern strøm
+i18n_fnetNumberOfMachines 			 : Optimal antall maskiner å be om
+i18n_fnetMinimalNumberOfMachines	 : Minimal antall maskiner
+i18n_fnetAskOnlyToFriends 			 : Spør bare til venner
+i18n_friendNetworkPowerSharing		 : Power Sharing
+i18n_fnetShareOnlyWithCommunity		 : Bare i ditt fellesskap
+i18n_fnetShareOnlyWithFriends 		 : Del kun med venner
+i18n_fnetAskOnlyToCommunity			 : Spør bare til ditt hovedsamfunn
+i18n_fnetAskOnlyToFriends			 : Spør bare til venner
+i18n_fnetSharingPower				 : Del strømmen din
+i18n_fnetAskForPower				 : Be om kraft
+
+i18n_leave_group                        : Forlat gruppe.
+i18n_other_groups                       : Medlemsgrupper
+i18n_leave_warning                      : Hvis du forlater gruppen, da mister du kanskje funksjonalitet tilknyttet den.
+i18n_group_name                         : Navn
+i18n_invite                             : Inviter bruker
+i18n_owner                              : Eier
+
+i18n_send_invite                        : Send invitasjon
+i18n_recipient                          : Mottaker
+i18n_invite_user                        : Inviter bruker
+i18n_optional                           : valgfritt
+i18n_full_name                          : Fullt navn
+
+
+i18n_failed_to_send                     : Kunne ikke sende invitasjon
+i18n_email_error                        : Kunne ikke sende epost. Vennligst sjekk adressen.
+i18n_unknown_error                      : Det oppsto en ukjent server feil.
+

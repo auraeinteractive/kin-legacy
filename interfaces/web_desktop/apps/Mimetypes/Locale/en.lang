@@ -1,0 +1,10 @@
+i18n_select_application            : Select application
+i18n_mimetypes                     : Mimetypes
+i18n_mimetypes_for_app             : Mimetypes for application
+i18n_link_types                    : Link types to application
+i18n_add_mimetype                  : Add mimetype
+i18n_cancel                        : Cancel
+
+i18n_correctly_set_mimetype        : Correctly set mimetype
+i18n_mimetype_updated              : Mimetype updated
+

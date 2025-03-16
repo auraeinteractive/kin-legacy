@@ -1,0 +1,60 @@
+
+	<div class="ContentFull">
+		<div class="VContentTop BorderBottom BackgroundStBlueDark" style="bottom: 47px" id="Equalizer">
+			<div class="ContentFull VisualizerBg" id="Flash">
+				<canvas id="visualizer"></canvas>
+			</div>
+			<!--<iframe id="player" class="FullContent" style="border: 0"></iframe>-->
+			<audio id="player" class="ContentFull"></audio>
+			<div id="scrollbg"></div>
+			<div id="scroll"></div>
+			<div id="time"></div>
+			<div id="progress"></div>
+		</div>
+		<div class="VContentTop" id="MiniPlaylistContainer">
+			<div class="ContentFull ScrollArea SmoothScrolling" id="MiniPlaylist"></div>
+		</div>
+		<div class="VContentBottom BackgroundLists BorderTop" style="height: 45px" id="BottomButtons">
+			<div class="HContent15 FloatRight">
+				<div class="HRow">
+					<div class="HContent50 FloatLeft">
+						<button type="button" class="IconButton IconSmall fa-list BtnPlaylist" onclick="Application.sendMessage( { command: 'toggle_miniplaylist' } );"></button>
+					</div>
+					<div class="HContent50 FloatLeft">
+						<button type="button" class="IconButton IconSmall fa-edit BtnEditPlaylist" onclick="EditPlaylist()"></button>
+					</div>
+				</div>
+			</div>
+			<div class="HContent85 FloatLeft Padding">
+				<div class="HRow">
+					<button type="button" class="HContent10 IconButton IconSmall fa-backward BtnPrevious FloatLeft NoMargins" onclick="Seek(-1)">
+					</button>
+					<button type="button" class="HContent10 IconButton IconSmall fa-stop BtnStop FloatLeft NoMargins" onclick="StopSong()">
+					</button>
+					<button id="playbutton" type="button" class="HContent10 IconButton IconSmall fa-play BtnPlay FloatLeft NoMargins" onclick="PlaySong( true )">
+					</button>
+					<button id="pausebutton" type="button" class="HContent10 IconButton IconSmall fa-pause BtnPause FloatLeft NoMargins" onclick="PauseSong()">
+					</button>
+					<button type="button" class="HContent10 IconButton IconSmall fa-forward BtnNext FloatLeft NoMargins" onclick="Seek(+1)">
+					</button>
+					<div class="HContent50 FloatLeft">
+						<div class="HContent5 FloatLeft">
+							&nbsp;
+						</div>
+						<div class="HContent95 FloatLeft">
+							<div class="HContent95 FloatLeft VolumeSlider">
+								<input type="hidden" value="64" min="0" max="255" id="Volume" onchange="Application.setVolume(this.value)"/>
+							</div>
+							<div class="HContent5 FloatLeft">
+								&nbsp;
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="Progdir:Scripts/player.js"></script>
+	<link rel="stylesheet" href="Progdir:Css/main.css"/>
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-ssh2_echo.dir/ssh2_echo.c.o" -o example-ssh2_echo  ../src/libssh2.a -lgcrypt 

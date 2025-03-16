@@ -1,0 +1,38 @@
+
+	
+	<div class="ContentFull BackgroundDefault">
+		<div class="VContentTop BorderBottom BackgroundDefault" style="height: 100px">
+			<div class="Padding">
+				<h2>
+					{app_activation_head}, {application}
+				</h2>
+				<p>
+					{app_activation_desc}
+				</p>
+			</div>
+		</div>
+		<div class="ScrollArea SmoothScrolling ContentFull" style="top: 100px; bottom: 48px">
+			<div class="Padding">
+				<div id="Permissions">
+					{permissions}
+				</div>
+				<!--<p class="Layout PaddingTop MarginTop BorderTop">
+					<strong>{i18n_security_domain}:</strong>
+				</p>
+				<p class="Layout"{securityDomainStyle}>
+					<select id="SecurityDomains"></select>
+				</p>-->
+			</div>
+		</div>
+		<div class="VContentBottom BorderTop BackgroundDefault" style="height: 48px">
+			<div class="Padding">
+				<button class="cancel IconSmall Button fa-remove FloatRight" onclick="CloseWindow()">
+					{app_activation_abort}
+				</button>
+				<button class="activation IconSmall Button fa-check">
+					{app_activation_button}
+				</button>
+			</div>
+		</div>
+	</div>
+

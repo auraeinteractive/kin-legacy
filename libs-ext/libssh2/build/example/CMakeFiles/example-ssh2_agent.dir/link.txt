@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-ssh2_agent.dir/ssh2_agent.c.o" -o example-ssh2_agent  ../src/libssh2.a -lgcrypt 

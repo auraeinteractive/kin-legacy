@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-sftp_mkdir.dir/sftp_mkdir.c.o" -o example-sftp_mkdir  ../src/libssh2.a -lgcrypt 

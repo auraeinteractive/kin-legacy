@@ -1,0 +1,8 @@
+{
+	"type":    "Local",
+	"short":   "Local server",
+	"literal": "Local server filesystem",
+	"group":   "Admin",
+	"sharing":  "0",
+	"icon": "logo.png"
+}

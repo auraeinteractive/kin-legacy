@@ -1,0 +1,71 @@
+.TopContainer
+{
+	bottom: 51px;
+}
+
+#Applications > .Box
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+#Applications > .Box .HRow > div + div
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	top: 12px;
+}
+
+#Settings
+{
+	display: none;
+}
+
+.DockEdit #Options
+{
+	display: none;
+}
+
+.DockEdit #SettingsContainer, .DockEdit #Settings
+{
+	height: 100%;
+	display: block;
+}
+
+@media (max-width: 480px)
+{
+	#Options
+	{
+		display: none;
+	}
+	#Applications
+	{
+		width: 100%;
+		clear: both;
+	}
+	.DockEdit #SettingsContainer, .DockEdit #Settings
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.SelectedApp #ApplicationSelection
+{
+	display: none;
+}
+
+.SelectedApp #Application
+{
+	display: block;
+}
+
+#Application
+{
+	display: none;
+}

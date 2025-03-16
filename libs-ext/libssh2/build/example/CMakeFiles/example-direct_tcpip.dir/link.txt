@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -Wall -rdynamic "CMakeFiles/example-direct_tcpip.dir/direct_tcpip.c.o" -o example-direct_tcpip  ../src/libssh2.a -lgcrypt 
