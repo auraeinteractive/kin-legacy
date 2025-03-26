@@ -1,8 +1,8 @@
-How to configure Friend OS
-==========================
+How to configure Kin
+====================
 
-Once you have built and/or installed Friend OS on your server, you need to
-configure it properly. Each Friend OS server can be used for many different 
+Once you have built and/or installed Kin on your server, you need to
+configure it properly. Each Kin server can be used for many different 
 purposes - from running a community to simply serving an app.
 
 Here is a list of configuration options, and what they mean.
@@ -10,7 +10,7 @@ Here is a list of configuration options, and what they mean.
 Sections
 ========
 
-The Friend OS configuration file is located in your build/cfg/cfg.ini file. 
+The Kin configuration file is located in your build/cfg/cfg.ini file. 
 If you do not have such a file, copy the build/cfg/cfg.ini.example and modify it.
 The config file is sectioned, so here is a description of configuration options along 
 with what they mean. If you wonder about config file formatting rules, please
@@ -36,7 +36,7 @@ port = 3306                       ; ! Port through which your database runs
 [FriendCore]
 ------------
 
-fchost = friendos.com             ; ! The hostname of your server
+fchost = Kin.com             ; ! The hostname of your server
 fcport = 6502                     ; ! The native port of your server
 fcupload = storage/               ; ! The location of your file storage folder
 fconlocalhost = 1                 ; ! If you're running on localhost (1 or 0)
@@ -64,6 +64,7 @@ modules = your-module             ; Set which login module to use
 blocktimeout = 30                 ; How long is a user blocked for logging in
 blockattempts = 10                ; How many login attempts before being blocked
 InvitesEnabled = true             ; If the invite system is enabled
+push_system = "php-web-push"      ; For push notifications
 
 [FriendNetwork]
 ---------------
@@ -86,7 +87,7 @@ enabled = 0                       ; Whether to enable Friend Chat
 reg_user = "your-reg-user"        ; Username of the user to handle registrations
 reg_password = "your-reg-pass"    ; Password of the user...
 reg_version = "v2"                ; Version of registration script
-reg_sitename = "Friend OS"        ; Named site for registration porposes
+reg_sitename = "Kin"              ; Named site for registration porposes
 reg_workgroup = "Lounge"          ; Which workgroup to add new users into
 reg_template = "Standard"         ; Which user template for new users
 reg_disk_size = "1GB"             ; How much private storage
