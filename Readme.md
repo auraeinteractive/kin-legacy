@@ -20,6 +20,11 @@ Kin Legacy transforms the web into a meta-OS, abstracting the complexities of mo
 
 ---
 
+![Kin Workspace](https://github.com/auraeinteractive/kin-legacy/blob/main/kin.png)
+
+---
+
+
 **Key Features**
 
 Kin Legacy introduces powerful capabilities tailored for modern development and operations:
